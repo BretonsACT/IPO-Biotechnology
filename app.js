@@ -762,8 +762,31 @@ function renderDossierView(companyId) {
         <strong>Thesis Statement:</strong> ${co.coreThesis}
       </div>
 
-      <!-- Section 2: PROMINENT BULL vs BEAR CASE BOXES -->
-      <div class="dossier-sec-title"><i class="fa-solid fa-scale-balanced"></i> 2. Bull Case (Upside Drivers) vs. Bear Case (Operational Risks)</div>
+      <!-- Section 2: Company Overview, Leadership & Capital Structure -->
+      <div class="dossier-sec-title"><i class="fa-solid fa-building-user"></i> 2. Company Overview, Executive Leadership & Capital Structure</div>
+      <div style="background:rgba(9, 13, 22, 0.6); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border-glass); margin-bottom:1.5rem; font-size:0.9rem; color:var(--text-muted);">
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; margin-bottom:1rem;">
+          <div>
+            <p style="margin-bottom:0.3rem;"><strong style="color:var(--text-main);"><i class="fa-solid fa-location-dot"></i> HQ & Facilities:</strong> ${co.headquarters}</p>
+            <p style="margin-bottom:0.3rem;"><strong style="color:var(--text-main);"><i class="fa-solid fa-user-tie"></i> Executive Officers:</strong> ${co.ceo} • ${co.cmo} ${co.cfo ? "• " + co.cfo : ""}</p>
+            <p style="margin-bottom:0.3rem;"><strong style="color:var(--text-main);"><i class="fa-solid fa-file-contract"></i> IPO Status:</strong> ${co.ipoStatus}</p>
+          </div>
+          <div>
+            <p style="margin-bottom:0.3rem;"><strong style="color:var(--text-main);"><i class="fa-solid fa-hand-holding-dollar"></i> Capital Raised:</strong> ${co.grossRaise}</p>
+            <p style="margin-bottom:0.3rem;"><strong style="color:var(--text-main);"><i class="fa-solid fa-vault"></i> Balance Sheet:</strong> ${co.cashBalance} (${co.cashRunway})</p>
+            <p style="margin-bottom:0.3rem;"><strong style="color:var(--text-main);"><i class="fa-solid fa-shield-halved"></i> Underwriting Syndicate:</strong> ${co.underwriters.join(", ")}</p>
+          </div>
+        </div>
+        ${co.licensingPartner ? `
+          <div style="background:rgba(56, 189, 248, 0.05); padding:0.75rem; border-radius:var(--radius-sm); border:1px solid rgba(56, 189, 248, 0.15);">
+            <strong style="color:var(--accent-cyan);"><i class="fa-solid fa-handshake"></i> Strategic Partnerships & Licensing Economics:</strong>
+            <p style="margin-top:0.25rem; font-size:0.875rem; color:var(--text-main);">${co.licensingPartner}</p>
+          </div>
+        ` : ''}
+      </div>
+
+      <!-- Section 3: PROMINENT BULL vs BEAR CASE BOXES -->
+      <div class="dossier-sec-title"><i class="fa-solid fa-scale-balanced"></i> 3. Bull Case (Upside Drivers) vs. Bear Case (Operational Risks)</div>
       <div class="cases-grid">
         <div class="bull-case-box">
           <div class="bull-case-title"><i class="fa-solid fa-arrow-trend-up"></i> 🟢 The Bull Case (Institutional Catalysts)</div>
@@ -780,15 +803,15 @@ function renderDossierView(companyId) {
         </div>
       </div>
 
-      <!-- Section 3: Market & Industry Dynamics -->
-      <div class="dossier-sec-title"><i class="fa-solid fa-chart-pie"></i> 3. Market & Industry Dynamics</div>
+      <!-- Section 4: Market & Industry Dynamics -->
+      <div class="dossier-sec-title"><i class="fa-solid fa-chart-pie"></i> 4. Market & Industry Dynamics</div>
       <div style="background:rgba(9, 13, 22, 0.6); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border-glass); margin-bottom:1.5rem; font-size:0.925rem; color:var(--text-muted);">
         <p style="margin-bottom:0.5rem;"><strong style="color:var(--text-main);">Total Addressable Market (TAM):</strong> ${co.tam}</p>
         <p><strong style="color:var(--text-main);">Market Dynamics & Value Proposition:</strong> ${co.marketDynamics}</p>
       </div>
 
-      <!-- Section 4: Clinical Trial Registrations (NCT Identifiers) -->
-      <div class="dossier-sec-title"><i class="fa-solid fa-vial"></i> 4. Clinical Trial Registrations & Efficacy Endpoints</div>
+      <!-- Section 5: Clinical Trial Registrations (NCT Identifiers) -->
+      <div class="dossier-sec-title"><i class="fa-solid fa-vial"></i> 5. Clinical Trial Registrations & Efficacy Endpoints</div>
       <div class="table-container" style="margin-bottom:1.5rem;">
         <table class="trial-table">
           <thead>
@@ -814,8 +837,8 @@ function renderDossierView(companyId) {
         </table>
       </div>
 
-      <!-- Section 5: Valuation Framework & Financial Scenarios -->
-      <div class="dossier-sec-title"><i class="fa-solid fa-calculator"></i> 5. Valuation Framework & Scenario Matrix</div>
+      <!-- Section 6: Valuation Framework & Financial Scenarios -->
+      <div class="dossier-sec-title"><i class="fa-solid fa-calculator"></i> 6. Valuation Framework & Scenario Matrix</div>
       <div class="table-container" style="margin-bottom:1.5rem;">
         <table class="trial-table">
           <thead>
@@ -853,8 +876,8 @@ function renderDossierView(companyId) {
         </table>
       </div>
 
-      <!-- Section 6: Risk Factors & Downside Mitigation -->
-      <div class="dossier-sec-title"><i class="fa-solid fa-shield-cat"></i> 6. Key Investment Risks & Mitigation Tactics</div>
+      <!-- Section 7: Key Investment Risks & Mitigation Tactics -->
+      <div class="dossier-sec-title"><i class="fa-solid fa-shield-cat"></i> 7. Key Investment Risks & Downside Mitigation Tactics</div>
       <div style="background:rgba(244, 63, 94, 0.06); border:1px solid rgba(244, 63, 94, 0.25); border-radius:var(--radius-md); padding:1.25rem; margin-bottom:1.5rem;">
         ${co.riskMitigations.map(rm => `
           <div style="margin-bottom:1rem;">
@@ -864,8 +887,8 @@ function renderDossierView(companyId) {
         `).join("")}
       </div>
 
-      <!-- Section 7: Exit Strategy & Key Catalyst Timeline -->
-      <div class="dossier-sec-title"><i class="fa-solid fa-timeline"></i> 7. Exit Strategy & Catalyst Timeline Roadmap</div>
+      <!-- Section 8: Exit Strategy & Key Catalyst Timeline -->
+      <div class="dossier-sec-title"><i class="fa-solid fa-timeline"></i> 8. Exit Strategy & Catalyst Timeline Roadmap</div>
       <div class="table-container" style="margin-bottom:1.5rem;">
         <table class="trial-table">
           <thead>
@@ -885,8 +908,8 @@ function renderDossierView(companyId) {
         </table>
       </div>
 
-      <!-- Section 8: Direct Source Citations & References -->
-      <div class="dossier-sec-title"><i class="fa-solid fa-link"></i> 8. Verified Source Citations & PDF Downloads</div>
+      <!-- Section 9: Direct Source Citations & References -->
+      <div class="dossier-sec-title"><i class="fa-solid fa-link"></i> 9. Verified Source Citations & Downloadable Research Memos</div>
       <div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin-bottom:1rem;">
         <a href="${co.pdfFile}" target="_blank" class="github-link-btn" style="background:linear-gradient(135deg, #0284c7, #0d9488); border:none; padding:0.4rem 0.8rem; font-weight:700; color:white;">
           <i class="fa-solid fa-file-pdf"></i> Download PDF Memo (${co.ticker})
