@@ -1,6 +1,6 @@
 /* ==========================================================================
    Biotech IPO Intelligence Suite - Modern Institutional Theme (Dark Glass)
-   Version: 1.0.0
+   Version: 1.0.0 (Granular Company Dossiers & Source Citations)
    ========================================================================== */
 
 :root {
@@ -198,6 +198,64 @@ body {
 .github-link-btn:hover {
   border-color: var(--accent-cyan);
   box-shadow: var(--glow-cyan);
+}
+
+/* Company Sub-Navigation Bar */
+.company-subnav {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0.75rem;
+  margin-bottom: 1.75rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+}
+.subnav-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glass);
+  color: var(--text-muted);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.subnav-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.08);
+}
+.subnav-btn.active {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: var(--accent-cyan);
+  color: var(--text-main);
+}
+
+/* Active Company Dossier Container */
+.active-dossier-container {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+}
+.dossier-sec-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  margin: 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 0.5rem;
 }
 
 /* Hero Section */
@@ -546,29 +604,7 @@ body {
   box-shadow: var(--glow-cyan);
 }
 
-/* Deep Dive & Bull/Bear Cases Layout */
-.deepdive-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.deepdive-card {
-  background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-}
-.deepdive-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  border-bottom: 1px solid var(--border-glass);
-  padding-bottom: 1rem;
-  margin-bottom: 1.5rem;
-}
+/* Bull & Bear Cases Grid */
 .cases-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -620,7 +656,7 @@ body {
   line-height: 1.5;
 }
 
-/* Clinical Trial Endpoints Table inside Deep Dive */
+/* Clinical Trial Endpoints Table */
 .trial-table {
   width: 100%;
   border-collapse: collapse;

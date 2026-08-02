@@ -1,6 +1,6 @@
-# 🧬 Multi-Agent System Architecture for Biotech IPO Intelligence
+# 🧬 Multi-Agent System Architecture for Biotech IPO Intelligence `v1.0.0`
 
-This directory contains the formal markdown specifications and execution rules for the 6 autonomous agents designed to evaluate biotechnology companies with recent or upcoming Initial Public Offerings (IPOs).
+This directory contains the formal markdown specifications and execution rules for the 7 autonomous agents designed to evaluate biotechnology companies with recent or upcoming Initial Public Offerings (IPOs).
 
 ---
 
@@ -14,6 +14,7 @@ This directory contains the formal markdown specifications and execution rules f
 | [`04_risk_market_agent.md`](file:///home/ACT/Downloads/Biotechnology/agents/04_risk_market_agent.md) | **Risk & Market Specialist** | TAM, Competition, Patent expiration, FTO, Manufacturing | Risk Matrix Rating & Score |
 | [`05_investment_committee_agent.md`](file:///home/ACT/Downloads/Biotechnology/agents/05_investment_committee_agent.md) | **Investment Committee** | Synthesis of all sub-agent scores into final rating | Rating (**Strong Buy**, **Speculative Buy**, **Hold**, **Avoid**) |
 | [`06_media_sentiment_agent.md`](file:///home/ACT/Downloads/Biotechnology/agents/06_media_sentiment_agent.md) | **Media & Sentiment Monitor** | Press (Lancet, BioSpace), Twitter/X, Reddit, Insider trading | Sentiment Score & Bullish/Bearish Ratio |
+| [`07_deep_dossier_agent.md`](file:///home/ACT/Downloads/Biotechnology/agents/07_deep_dossier_agent.md) | **Deep Dossier Compiler** | Executive profiles, NCT trials, Bull/Bear cases, Citations | Comprehensive Multi-Page Company Dossier |
 
 ---
 
@@ -31,14 +32,6 @@ flowchart TD
     Sub4 -->|TAM & Patent Score| Synthesis
     Sub6 -->|Sentiment Ratio & Press Highlights| Synthesis
     
-    Synthesis -->|Generates Final Institutional Memo| FinalReport[Biotech IPO Investment Web Report]
+    Synthesis -->|Weighted Multi-Factor Rating| Sub7[7. Deep Dossier Agent]
+    Sub7 -->|Compiles Multipage Dossiers & Citations| FinalReport[Web App & GitHub Dossiers]
 ```
-
----
-
-## 💡 How to Review & Inspect Agent Behavior
-Each agent file contains:
-- **Role Overview**: The core objective and boundaries of the agent.
-- **Core Responsibilities & Scope**: Step-by-step evaluation tasks.
-- **Standard Operating Procedure (SOP)**: Flowcharts, mathematical formulas, or weighting matrices.
-- **Standard Output Schema**: Structured JSON data contracts passed between agents.

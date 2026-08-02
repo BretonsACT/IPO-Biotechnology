@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=1.0.0">
+  <link rel="stylesheet" href="styles.css?v=1.0.0_dossiers">
 </head>
 <body>
 
@@ -34,7 +34,7 @@
       </div>
       <nav class="nav-links">
         <button class="nav-btn active" data-tab="dashboard-tab"><i class="fa-solid fa-chart-line"></i> Dashboard</button>
-        <button class="nav-btn" data-tab="deepdive-tab"><i class="fa-solid fa-magnifying-glass-chart"></i> Deep Dive & Cases</button>
+        <button class="nav-btn" data-tab="dossier-tab"><i class="fa-solid fa-book-open"></i> Company Dossiers</button>
         <button class="nav-btn" data-tab="media-tab"><i class="fa-solid fa-newspaper"></i> Media & Sentiment</button>
         <button class="nav-btn" data-tab="matrix-tab"><i class="fa-solid fa-table-cells"></i> Market Matrix</button>
         <button class="nav-btn" data-tab="agents-tab"><i class="fa-solid fa-robot"></i> Multi-Agent Suite</button>
@@ -53,7 +53,7 @@
       </div>
       <h1>Biotechnology IPO <span class="gradient-text">Investment Intelligence</span></h1>
       <p class="hero-description">
-        Autonomous multi-agent evaluation of recent and pipeline Biotech IPOs (2024–2026). Granular scientific clinical trials, cash runway buffers, patent estates, <strong>Bull vs. Bear investment cases</strong>, mainstream press, and community sentiment audits.
+        Autonomous multi-agent evaluation of recent and pipeline Biotech IPOs (2024–2026). Exhaustive scientific dossiers, clinical trial NCT identifiers, cash runway buffers, patent estates, <strong>5-point Bull vs Bear cases</strong>, and verified source citations.
       </p>
 
       <!-- KPI Stats Banner -->
@@ -117,15 +117,25 @@
       </div>
     </div>
 
-    <!-- Tab 2: Granular Deep Dive & Bull / Bear Cases View -->
-    <div id="deepdive-tab" class="tab-content">
+    <!-- Tab 2: Exhaustive Company Dossiers & Bull / Bear Cases View -->
+    <div id="dossier-tab" class="tab-content">
       <div class="section-header">
-        <h2>Institutional <span class="gradient-text">Bull & Bear Case Deep Dives</span> <span class="version-tag">v1.0.0</span></h2>
-        <p>Comprehensive scientific, financial, clinical trial NCT identifiers, Bull case drivers, and Bear case risk audits for each biotechnology company.</p>
+        <h2>Institutional <span class="gradient-text">Company Research Dossiers</span> <span class="version-tag">v1.0.0</span></h2>
+        <p>Exhaustive multi-page research, C-suite leadership profiles, clinical trial NCT registration data, 5-point Bull vs Bear cases, and direct source citations.</p>
       </div>
 
-      <!-- Deep Dive Accordion / Sections -->
-      <div id="deepdive-container" class="deepdive-container">
+      <!-- Company Selector Sub-navigation Bar -->
+      <div class="company-subnav">
+        <button class="subnav-btn active" data-company="klra"><span class="ticker-badge" style="font-size:0.75rem;">KLRA</span> Kailera</button>
+        <button class="subnav-btn" data-company="bcax"><span class="ticker-badge" style="font-size:0.75rem;">BCAX</span> Bicara</button>
+        <button class="subnav-btn" data-company="cgon"><span class="ticker-badge" style="font-size:0.75rem;">CGON</span> CG Oncology</button>
+        <button class="subnav-btn" data-company="sctx"><span class="ticker-badge" style="font-size:0.75rem;">SCTX</span> Scribe</button>
+        <button class="subnav-btn" data-company="mane"><span class="ticker-badge" style="font-size:0.75rem;">MANE</span> Veradermics</button>
+        <button class="subnav-btn" data-company="apni"><span class="ticker-badge" style="font-size:0.75rem;">APMD</span> Apnimed</button>
+      </div>
+
+      <!-- Selected Company Active Dossier View -->
+      <div id="active-dossier-container" class="active-dossier-container">
         <!-- Injected via JavaScript -->
       </div>
     </div>
@@ -176,7 +186,7 @@
     <div id="agents-tab" class="tab-content">
       <div class="section-header">
         <h2>Multi-Agent System <span class="gradient-text">Architecture</span> <span class="version-tag">v1.0.0</span></h2>
-        <p>Explore the 6 specialized autonomous agents designed to evaluate biotech IPO filings, clinical trials, media sentiment, and valuation models.</p>
+        <p>Explore the 7 specialized autonomous agents designed to evaluate biotech IPO filings, clinical trials, media sentiment, and valuation models.</p>
       </div>
 
       <div class="agent-architecture-grid" id="agent-architecture-grid">
@@ -210,16 +220,19 @@
         <a href="https://github.com/BretonsACT/IPO-Biotechnology" target="_blank" class="footer-link">
           <i class="fa-brands fa-github"></i> GitHub Repository
         </a>
-        <a href="reports/INSTITUTIONAL_BIOTECH_DEEP_DIVE_2026.md" target="_blank" class="footer-link" style="color:var(--accent-teal);">
-          <i class="fa-solid fa-book-bookmark"></i> Deep Dive Report v1.0.0
+        <a href="reports/KLRA_KAILERA_DOSSIER.md" target="_blank" class="footer-link" style="color:var(--accent-teal);">
+          <i class="fa-solid fa-file-powerpoint"></i> KLRA Dossier
         </a>
-        <a href="reports/MEDIA_SENTIMENT_REPORT_2026.md" target="_blank" class="footer-link">
-          <i class="fa-solid fa-newspaper"></i> Media Audit v1.0.0
+        <a href="reports/CGON_CG_ONCOLOGY_DOSSIER.md" target="_blank" class="footer-link">
+          <i class="fa-solid fa-file-powerpoint"></i> CGON Dossier
+        </a>
+        <a href="reports/INSTITUTIONAL_BIOTECH_DEEP_DIVE_2026.md" target="_blank" class="footer-link">
+          <i class="fa-solid fa-book-bookmark"></i> Full Deep Dive Report
         </a>
       </div>
     </div>
   </footer>
 
-  <script src="app.js?v=1.0.0"></script>
+  <script src="app.js?v=1.0.0_dossiers"></script>
 </body>
 </html>
