@@ -1,7 +1,7 @@
 /**
  * Biotech IPO Intelligence Suite - Client Script
  * Multi-Agent Biotechnology Investment Research & Analytics
- * Enhanced with Agent 6: Media, Social & Community Sentiment Monitoring
+ * Enhanced with Dedicated Media & Sentiment Tab & External Media Links
  */
 
 // Dataset of Analyzed Biotechnology IPO Companies (2024-2026)
@@ -37,7 +37,13 @@ const biotechCompanies = [
       rating: "Strongly Bullish (88% Bullish)",
       pressHighlight: "Featured in BioSpace & Endpoints News as largest 2026 biotech IPO; positive Phase 3 ADA 2026 trial readouts.",
       twitterBuzz: "High cashtag engagement ($KLRA) on challenging Eli Lilly & Novo Nordisk in obesity market.",
-      redditBuzz: "r/stocks & r/StockTitan highlight $1.2B cash runway insulating from near-term dilution."
+      redditBuzz: "r/stocks & r/StockTitan highlight $1.2B cash runway insulating from near-term dilution.",
+      links: [
+        { label: "BioSpace Coverage", icon: "fa-newspaper", url: "https://www.biospace.com/search?q=Kailera" },
+        { label: "Fierce Biotech Article", icon: "fa-solid fa-square-rss", url: "https://www.fiercebiotech.com/search?q=Kailera" },
+        { label: "Twitter / X ($KLRA)", icon: "fa-brands fa-x-twitter", url: "https://x.com/search?q=%24KLRA" },
+        { label: "Reddit Discourse", icon: "fa-brands fa-reddit", url: "https://www.reddit.com/r/stocks/search/?q=Kailera" }
+      ]
     }
   },
   {
@@ -71,7 +77,13 @@ const biotechCompanies = [
       rating: "Moderately Bullish (70% Bullish)",
       pressHighlight: "Board additions (Jeremy Bender, Christy Oliger) announced in July 2026 to prepare for commercial launch.",
       twitterBuzz: "Discussions under $BCAX tracking routine 10b5-1 executive stock sales.",
-      redditBuzz: "r/biotech views combination with Keytruda as strong big pharma acquisition target."
+      redditBuzz: "r/biotech views combination with Keytruda as strong big pharma acquisition target.",
+      links: [
+        { label: "BioSpace HNSCC News", icon: "fa-newspaper", url: "https://www.biospace.com/search?q=Bicara" },
+        { label: "MarketBeat Financials", icon: "fa-solid fa-chart-bar", url: "https://www.marketbeat.com/stocks/NASDAQ/BCAX/" },
+        { label: "Twitter / X ($BCAX)", icon: "fa-brands fa-x-twitter", url: "https://x.com/search?q=%24BCAX" },
+        { label: "Reddit Community", icon: "fa-brands fa-reddit", url: "https://www.reddit.com/r/biotech/search/?q=Bicara" }
+      ]
     }
   },
   {
@@ -105,7 +117,13 @@ const biotechCompanies = [
       rating: "Extremely Bullish (92% Bullish)",
       pressHighlight: "Pivotal BOND-003 trial published in The Lancet Oncology (July 2026); BLA filing on track for Q4 2026.",
       twitterBuzz: "Urology specialists on X praise 89% 12-month bladder preservation as a clinical paradigm shift.",
-      redditBuzz: "r/biotech & r/stocks highlight quality-of-life benefits over radical surgery."
+      redditBuzz: "r/biotech & r/stocks highlight quality-of-life benefits over radical surgery.",
+      links: [
+        { label: "The Lancet Oncology Paper", icon: "fa-solid fa-book-journal-whills", url: "https://www.thelancet.com/journals/lanonc/home" },
+        { label: "BioSpace Clinical News", icon: "fa-newspaper", url: "https://www.biospace.com/search?q=CG+Oncology" },
+        { label: "Twitter / X ($CGON)", icon: "fa-brands fa-x-twitter", url: "https://x.com/search?q=%24CGON" },
+        { label: "Reddit Urology Thread", icon: "fa-brands fa-reddit", url: "https://www.reddit.com/r/biotech/search/?q=CG+Oncology" }
+      ]
     }
   },
   {
@@ -139,7 +157,13 @@ const biotechCompanies = [
       rating: "Bullish (80% Bullish)",
       pressHighlight: "Credited by Fierce Biotech with reopening the in vivo gene editing IPO window; Eli Lilly & Sanofi milestone backing.",
       twitterBuzz: "Cashtag $SCTX tracking co-founder Jennifer Doudna's scientific presentations.",
-      redditBuzz: "r/StockTitan praises proprietary CasX enzyme engineering over standard Cas9."
+      redditBuzz: "r/StockTitan praises proprietary CasX enzyme engineering over standard Cas9.",
+      links: [
+        { label: "Fierce Biotech Article", icon: "fa-newspaper", url: "https://www.fiercebiotech.com/search?q=Scribe" },
+        { label: "BioPharma Dive Alliances", icon: "fa-solid fa-handshake", url: "https://www.biopharmadive.com/search?q=Scribe" },
+        { label: "Twitter / X ($SCTX)", icon: "fa-brands fa-x-twitter", url: "https://x.com/search?q=%24SCTX" },
+        { label: "Reddit Stock Titan", icon: "fa-brands fa-reddit", url: "https://www.reddit.com/r/StockTitan/search/?q=Scribe" }
+      ]
     }
   },
   {
@@ -173,7 +197,13 @@ const biotechCompanies = [
       rating: "Bullish (76% Bullish)",
       pressHighlight: "Featured in aesthetic dermatology press for Phase 3 oral minoxidil micro-dosing safety profile.",
       twitterBuzz: "Dermatology KOL discussions focus on solving compliance and systemic side-effect hurdles.",
-      redditBuzz: "r/tressless & r/stocks show high consumer interest for safer oral hair loss alternative."
+      redditBuzz: "r/tressless & r/stocks show high consumer interest for safer oral hair loss alternative.",
+      links: [
+        { label: "Business Wire Press Release", icon: "fa-newspaper", url: "https://www.businesswire.com" },
+        { label: "BioSpace Dermatology News", icon: "fa-solid fa-briefcase-medical", url: "https://www.biospace.com/search?q=Veradermics" },
+        { label: "Twitter / X ($MANE)", icon: "fa-brands fa-x-twitter", url: "https://x.com/search?q=%24MANE" },
+        { label: "Reddit Hairloss Thread", icon: "fa-brands fa-reddit", url: "https://www.reddit.com/r/tressless/search/?q=Veradermics" }
+      ]
     }
   },
   {
@@ -207,7 +237,13 @@ const biotechCompanies = [
       rating: "Bullish Pre-IPO (84% Bullish)",
       pressHighlight: "S-1 filing covered across healthcare financial press for disruptor potential in CPAP market.",
       twitterBuzz: "Sleep medicine researchers highlight high demand for non-CPAP oral therapies.",
-      redditBuzz: "Patient advocacy and investor subreddits note 80%+ CPAP discontinuation rate as major TAM driver."
+      redditBuzz: "Patient advocacy and investor subreddits note 80%+ CPAP discontinuation rate as major TAM driver.",
+      links: [
+        { label: "Endpoints News S-1 Raise", icon: "fa-newspaper", url: "https://endpoints.news" },
+        { label: "BioSpace Phase 3 Study", icon: "fa-solid fa-flask", url: "https://www.biospace.com/search?q=Apnimed" },
+        { label: "Twitter / X ($APNI)", icon: "fa-brands fa-x-twitter", url: "https://x.com/search?q=%24APNI" },
+        { label: "Reddit Sleep Apnea Thread", icon: "fa-brands fa-reddit", url: "https://www.reddit.com/r/stocks/search/?q=Apnimed" }
+      ]
     }
   }
 ];
@@ -255,6 +291,7 @@ const agentSpecs = [
 // DOM Load Event
 document.addEventListener("DOMContentLoaded", () => {
   renderCards(biotechCompanies);
+  renderMediaTab(biotechCompanies);
   renderMatrixTable(biotechCompanies);
   renderAgentCards(agentSpecs);
   setupNavigation();
@@ -262,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupModal();
 });
 
-// Render Cards Grid
+// Render Main Dashboard Cards Grid
 function renderCards(data) {
   const grid = document.getElementById("company-cards-grid");
   if (!grid) return;
@@ -317,6 +354,52 @@ function renderCards(data) {
         </div>
         <button class="btn-detail" onclick="openCompanyModal('${co.id}')">
           Deep Dive <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  `).join("");
+}
+
+// Render Dedicated Media & Sentiment Tab Grid
+function renderMediaTab(data) {
+  const grid = document.getElementById("media-cards-grid");
+  if (!grid) return;
+
+  grid.innerHTML = data.map(co => `
+    <div class="company-card" style="border-top: 4px solid var(--accent-purple);">
+      <div>
+        <div class="card-top">
+          <span class="ticker-badge">${co.ticker}</span>
+          <span class="score-badge" style="font-size:0.9rem; color:var(--accent-purple);">
+            Media Score: <strong>${co.mediaScore}/100</strong>
+          </span>
+        </div>
+        <h3 class="company-title">${co.name}</h3>
+        <p class="company-status" style="color:var(--accent-teal); font-weight:600;">
+          <i class="fa-solid fa-bullhorn"></i> ${co.mediaSentiment.rating}
+        </p>
+
+        <div style="background:rgba(9, 13, 22, 0.6); padding:0.85rem; border-radius:var(--radius-sm); border:1px solid var(--border-glass); margin-bottom:1rem; font-size:0.85rem; color:var(--text-muted);">
+          <p style="margin-bottom:0.4rem; color:var(--text-main);"><strong>Press Highlight:</strong> ${co.mediaSentiment.pressHighlight}</p>
+          <p style="margin-bottom:0.4rem;"><strong>X/Twitter:</strong> ${co.mediaSentiment.twitterBuzz}</p>
+          <p><strong>Reddit:</strong> ${co.mediaSentiment.redditBuzz}</p>
+        </div>
+
+        <div style="margin-bottom:1rem;">
+          <span class="asset-lbl" style="display:block; margin-bottom:0.5rem;"><i class="fa-solid fa-link"></i> Direct Media & Social Links:</span>
+          <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+            ${co.mediaSentiment.links.map(l => `
+              <a href="${l.url}" target="_blank" class="github-link-btn" style="padding:0.35rem 0.65rem; font-size:0.775rem; text-decoration:none; background:rgba(139, 92, 246, 0.12); border-color:rgba(139, 92, 246, 0.3); color:var(--text-main);">
+                <i class="${l.icon}"></i> ${l.label}
+              </a>
+            `).join("")}
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <button class="btn-detail" onclick="openCompanyModal('${co.id}')" style="width:100%; text-align:center;">
+          Full Agent Audit <i class="fa-solid fa-arrow-right"></i>
         </button>
       </div>
     </div>
@@ -498,7 +581,15 @@ function openCompanyModal(companyId) {
         <p style="margin-bottom:0.4rem;"><strong>Overall Sentiment Rating:</strong> <span style="color:var(--accent-purple); font-weight:700;">${co.mediaSentiment.rating}</span></p>
         <p style="margin-bottom:0.4rem;"><strong>Press Highlights:</strong> ${co.mediaSentiment.pressHighlight}</p>
         <p style="margin-bottom:0.4rem;"><strong>Twitter / X Buzz:</strong> ${co.mediaSentiment.twitterBuzz}</p>
-        <p><strong>Reddit Community Sentiment:</strong> ${co.mediaSentiment.redditBuzz}</p>
+        <p style="margin-bottom:0.8rem;"><strong>Reddit Community Sentiment:</strong> ${co.mediaSentiment.redditBuzz}</p>
+        
+        <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+          ${co.mediaSentiment.links.map(l => `
+            <a href="${l.url}" target="_blank" class="github-link-btn" style="padding:0.3rem 0.6rem; font-size:0.775rem; text-decoration:none; background:rgba(139, 92, 246, 0.2); border-color:rgba(139, 92, 246, 0.4); color:var(--text-main);">
+              <i class="${l.icon}"></i> ${l.label}
+            </a>
+          `).join("")}
+        </div>
       </div>
 
       <div class="modal-sec-title"><i class="fa-solid fa-flask"></i> Clinical & Scientific Evaluation</div>

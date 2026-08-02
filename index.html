@@ -34,6 +34,7 @@
       </div>
       <nav class="nav-links">
         <button class="nav-btn active" data-tab="dashboard-tab"><i class="fa-solid fa-chart-line"></i> Dashboard</button>
+        <button class="nav-btn" data-tab="media-tab"><i class="fa-solid fa-newspaper"></i> Media & Sentiment</button>
         <button class="nav-btn" data-tab="matrix-tab"><i class="fa-solid fa-table-cells"></i> Market Matrix</button>
         <button class="nav-btn" data-tab="agents-tab"><i class="fa-solid fa-robot"></i> Multi-Agent Suite</button>
         <a href="https://github.com/BretonsACT/IPO-Biotechnology" target="_blank" class="github-link-btn">
@@ -51,7 +52,7 @@
       </div>
       <h1>Biotechnology IPO <span class="gradient-text">Investment Intelligence</span></h1>
       <p class="hero-description">
-        Autonomous multi-agent evaluation of recent and pipeline Biotech IPOs (2024–2026). Synthesizing clinical trial endpoints, cash runway buffers, patent estates, and risk-adjusted valuation models into institutional recommendations.
+        Autonomous multi-agent evaluation of recent and pipeline Biotech IPOs (2024–2026). Synthesizing clinical trial endpoints, cash runway buffers, patent estates, mainstream press, Twitter/X cashtags, and Reddit community sentiment.
       </p>
 
       <!-- KPI Stats Banner -->
@@ -73,8 +74,8 @@
         <div class="kpi-card">
           <div class="kpi-icon blue"><i class="fa-solid fa-vault"></i></div>
           <div class="kpi-data">
-            <span class="kpi-value">$36.7M</span>
-            <span class="kpi-label">Avg Mo. Cash Runway</span>
+            <span class="kpi-value">84.7/100</span>
+            <span class="kpi-label">Avg Media Sentiment</span>
           </div>
         </div>
         <div class="kpi-card">
@@ -117,11 +118,24 @@
       </div>
     </div>
 
-    <!-- Tab 2: Comparative Market Matrix -->
+    <!-- Tab 2: Dedicated Media & Social Sentiment Tab -->
+    <div id="media-tab" class="tab-content">
+      <div class="section-header">
+        <h2>Media, Social & Community <span class="gradient-text">Sentiment Monitor</span></h2>
+        <p>Mainstream healthcare press coverage (*The Lancet Oncology*, *BioSpace*, *Fierce Biotech*), Twitter/X cashtags, and Reddit investor community discourse.</p>
+      </div>
+
+      <!-- Media Sentiment Cards Grid -->
+      <div class="cards-grid" id="media-cards-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+
+    <!-- Tab 3: Comparative Market Matrix -->
     <div id="matrix-tab" class="tab-content">
       <div class="section-header">
         <h2>Institutional Market <span class="gradient-text">Comparison Matrix</span></h2>
-        <p>Comparative valuation metrics, cash runway buffers, and multi-agent scores across all analyzed IPO candidates.</p>
+        <p>Comparative valuation metrics, cash runway buffers, media scores, and multi-agent recommendations across all analyzed IPO candidates.</p>
       </div>
 
       <div class="table-container glass-card">
@@ -134,7 +148,7 @@
               <th>Phase</th>
               <th>Market Cap</th>
               <th>Cash Runway</th>
-              <th>Target TAM</th>
+              <th>Media Score</th>
               <th>Agent Score</th>
               <th>Recommendation</th>
               <th>Actions</th>
@@ -147,11 +161,11 @@
       </div>
     </div>
 
-    <!-- Tab 3: Multi-Agent Suite Architecture -->
+    <!-- Tab 4: Multi-Agent Suite Architecture -->
     <div id="agents-tab" class="tab-content">
       <div class="section-header">
         <h2>Multi-Agent System <span class="gradient-text">Architecture</span></h2>
-        <p>Explore the 5 specialized autonomous agents designed to evaluate biotech IPO filings, clinical trials, and valuation models.</p>
+        <p>Explore the 6 specialized autonomous agents designed to evaluate biotech IPO filings, clinical trials, media sentiment, and valuation models.</p>
       </div>
 
       <div class="agent-architecture-grid" id="agent-architecture-grid">
@@ -185,8 +199,11 @@
         <a href="https://github.com/BretonsACT/IPO-Biotechnology" target="_blank" class="footer-link">
           <i class="fa-brands fa-github"></i> GitHub Repository
         </a>
+        <a href="reports/MEDIA_SENTIMENT_REPORT_2026.md" target="_blank" class="footer-link">
+          <i class="fa-solid fa-newspaper"></i> Media Audit Report
+        </a>
         <a href="reports/BIOTECH_IPO_REPORT_2026.md" target="_blank" class="footer-link">
-          <i class="fa-regular fa-file-lines"></i> Full Markdown Report
+          <i class="fa-regular fa-file-lines"></i> Full Research Report
         </a>
       </div>
     </div>
