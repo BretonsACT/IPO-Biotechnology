@@ -1,10 +1,10 @@
 /**
  * Biotech IPO Intelligence Suite - Client Script
- * Version: 2.0.0 (Institutional Investment Thesis Framework Standard)
- * Based on P2P Market Data Institutional Thesis Standards
+ * Version: 2.1.0 (PDF Downloads & Prominent Bull/Bear Callout Boxes)
+ * Professional Institutional Investment Thesis Standard
  */
 
-const APP_VERSION = "2.0.0";
+const APP_VERSION = "2.1.0";
 
 // Dataset of Analyzed Biotechnology IPO Companies (2024-2026)
 const biotechCompanies = [
@@ -12,7 +12,8 @@ const biotechCompanies = [
     id: "klra",
     ticker: "KLRA",
     name: "Kailera Therapeutics",
-    version: "v2.0",
+    version: "v2.1",
+    pdfFile: "reports/pdf/KLRA_KAILERA_DOSSIER.pdf",
     headquarters: "Waltham, Massachusetts, USA",
     ceo: "Ron Renaud (ex-Translate Bio)",
     cmo: "Scott Wasserman, M.D.",
@@ -35,13 +36,27 @@ const biotechCompanies = [
     underwriters: ["Bain Capital", "Jefferies", "Morgan Stanley", "Leerink Partners"],
     licensingPartner: "Jiangsu Hengrui Pharmaceuticals ($110M upfront + $200M milestones)",
 
-    // Institutional Investment Thesis 8-Part Dataset
     targetPrice: "$38.00",
     impliedUpside: "+90.0%",
     horizon: "24 – 36 Months",
     positionSizing: "Overweight (3.5% Portfolio Allocation)",
     coreThesis: "De-risked Phase 3 entry into the $100B+ obesity market backed by an unprecedented $1.22B cash buffer (56 months runway) insulating shareholders through mid-2028. Controls dual GLP-1/GIP injectable Ribupatide and oral small-molecule KAI-7535 with positive Phase 3 top-line data.",
     marketDynamics: "Global obesity TAM expanding to $100B+ by 2030 (1B+ affected adults). Severe supply constraints and patient compliance hurdles with weekly injections drive massive demand for dual agonists and oral small-molecule GLP-1 pills.",
+    
+    bullCase: [
+      "Fortress $1.22B balance sheet provides 56 months of runway into mid-2028, eliminating secondary equity dilution risks.",
+      "Dual GLP-1/GIP agonist (Ribupatide) demonstrates competitive weight-loss efficacy matching Eli Lilly's Zepbound and Novo Nordisk's Wegovy.",
+      "Oral KAI-7535 small molecule GLP-1 offers a massive compliance and convenience moat over weekly injections in a $100B+ TAM.",
+      "Exclusive Hengrui Pharmaceuticals licensing agreement secures global rights outside Greater China ($110M upfront already paid).",
+      "Backed by elite tier-1 healthcare syndicate (Bain Capital Life Sciences, Atlas Venture, RTW Investments)."
+    ],
+    bearCase: [
+      "Intense market concentration and price wars driven by incumbents Eli Lilly (tirzepatide) and Novo Nordisk (semaglutide/CagriSema).",
+      "Requires establishing large-scale commercial peptide and small-molecule supply chain infrastructure prior to launch.",
+      "Western Phase 2/3 trial titration optimization risk to prevent gastrointestinal discontinuations.",
+      "Binary risk associated with KaiNETIC-3 head-to-head trial vs semaglutide.",
+      "Macroeconomic healthcare pricing pressure and Medicare drug price negotiations."
+    ],
     pillars: [
       "1. Phase 3-Validated Dual GLP-1/GIP Efficacy: Ribupatide demonstrates weight-loss efficacy matching tirzepatide with optimized tolerability ratios.",
       "2. Fortress $1.22B Balance Sheet: Provides 56 months of runway into mid-2028, completely funding all 3 KaiNETIC trials without secondary equity dilution.",
@@ -70,20 +85,6 @@ const biotechCompanies = [
       { name: "KaiNETIC-3", nct: "NCT07284979", phase: "Phase 3", pop: "Severe Obesity (BMI >= 35)", endpoint: "Head-to-head superiority vs Wegovy" },
       { name: "HARBOR-1", nct: "China Reg", phase: "Phase 3", pop: "Oral KAI-7535 (n=800)", endpoint: "Met primary weight loss endpoints (July 2026)" }
     ],
-    bullCase: [
-      "Fortress $1.22B balance sheet provides 56 months of runway into mid-2028, eliminating secondary equity dilution risks.",
-      "Dual GLP-1/GIP agonist (Ribupatide) demonstrates competitive weight-loss efficacy matching Eli Lilly's Zepbound and Novo Nordisk's Wegovy.",
-      "Oral KAI-7535 small molecule GLP-1 offers a massive compliance and convenience moat over weekly injections in a $100B+ TAM.",
-      "Exclusive Hengrui Pharmaceuticals licensing agreement secures global rights outside Greater China ($110M upfront already paid).",
-      "Backed by elite tier-1 healthcare syndicate (Bain Capital Life Sciences, Atlas Venture, RTW Investments)."
-    ],
-    bearCase: [
-      "Intense market concentration and price wars driven by incumbents Eli Lilly (tirzepatide) and Novo Nordisk (semaglutide/CagriSema).",
-      "Requires establishing large-scale commercial peptide and small-molecule supply chain infrastructure prior to launch.",
-      "Western Phase 2/3 trial titration optimization risk to prevent gastrointestinal discontinuations.",
-      "Binary risk associated with KaiNETIC-3 head-to-head trial vs semaglutide.",
-      "Macroeconomic healthcare pricing pressure and Medicare drug price negotiations."
-    ],
     thesis: "Kailera provides an institutional-grade, de-risked Phase 3 entry into the cardiometabolic megatrend backed by a $1.22B cash buffer and top-tier healthcare VC syndicate.",
     mediaSentiment: {
       rating: "Strongly Bullish (88% Bullish)",
@@ -103,7 +104,8 @@ const biotechCompanies = [
     id: "bcax",
     ticker: "BCAX",
     name: "Bicara Therapeutics",
-    version: "v2.0",
+    version: "v2.1",
+    pdfFile: "reports/pdf/BCAX_BICARA_DOSSIER.pdf",
     headquarters: "Boston, Massachusetts, USA",
     ceo: "Claire Mazumdar, Ph.D., MBA",
     cmo: "David Raben, M.D., Ph.D.",
@@ -132,6 +134,20 @@ const biotechCompanies = [
     positionSizing: "Tactical Overweight (2.5% Allocation)",
     coreThesis: "High-conviction oncology buyout candidate. Lead bispecific antibody Ficerafusp Alfa combines EGFR mAb with TGF-β trap in 1L Head & Neck cancer. Phase 1b data showed median Overall Survival > 23 months (vs 12.3 mo Keytruda benchmark). Active FORTIFI-HN01 trial (n=650) makes Bicara a prime M&A target.",
     marketDynamics: "$6.5B global Head & Neck cancer market. Standard 1L therapy capped at 20% response rate with Keytruda monotherapy, creating an urgent demand for synergistic combination biologics.",
+    bullCase: [
+      "FDA Breakthrough Therapy designation for 1L HPV-negative Head and Neck cancer.",
+      "Phase 1b 3-year survival data showed median OS > 23 months—nearly doubling Keytruda's historical benchmark (12.3 months).",
+      "$539.8M balance sheet secures cash runway through 1H 2029, fully funding the mid-2027 pivotal trial interim analysis.",
+      "Prime acquisition candidate for major oncology pharma seeking to extend Keytruda combination dominance.",
+      "Commercial Board Expansion: Added industry veterans Jeremy Bender and Christy Oliger in July 2026."
+    ],
+    bearCase: [
+      "Single-asset concentration risk tied strictly to FORTIFI-HN01 clinical trial readouts.",
+      "Manufacturing complexity of dual EGFR x TGF-β bispecific antibody trap.",
+      "Insider 10b5-1 stock sales creating short-term sentiment noise.",
+      "Keytruda patent cliff late in decade altering combination pricing dynamics.",
+      "Phase 3 OS data must demonstrate statistically significant superiority over Keytruda monotherapy."
+    ],
     pillars: [
       "1. Phase 1b Survival Superiority: Median OS > 23 months vs 12.3 mo Keytruda historical benchmark.",
       "2. FDA Breakthrough Designation: Granted for 1L HPV-negative Head & Neck cancer.",
@@ -156,20 +172,6 @@ const biotechCompanies = [
       { name: "FORTIFI-HN01 Phase 2", nct: "NCT06788990", phase: "Phase 2", pop: "1L HPV-neg HNSCC (n=120)", endpoint: "ORR & Dose Selection (1500mg vs 750mg)" },
       { name: "FORTIFI-HN01 Phase 3", nct: "NCT06788990", phase: "Phase 3", pop: "1L HPV-neg HNSCC (n=650)", endpoint: "Overall Survival (OS) & PFS vs Keytruda" }
     ],
-    bullCase: [
-      "FDA Breakthrough Therapy designation for 1L HPV-negative Head and Neck cancer.",
-      "Phase 1b 3-year survival data showed median OS > 23 months—nearly doubling Keytruda's historical benchmark (12.3 months).",
-      "$539.8M balance sheet secures cash runway through 1H 2029, fully funding the mid-2027 pivotal trial interim analysis.",
-      "Prime acquisition candidate for major oncology pharma seeking to extend Keytruda combination dominance.",
-      "Commercial Board Expansion: Added industry veterans Jeremy Bender and Christy Oliger in July 2026."
-    ],
-    bearCase: [
-      "Single-asset concentration risk tied strictly to FORTIFI-HN01 clinical trial readouts.",
-      "Manufacturing complexity of dual EGFR x TGF-β bispecific antibody trap.",
-      "Insider 10b5-1 stock sales creating short-term sentiment noise.",
-      "Keytruda patent cliff late in decade altering combination pricing dynamics.",
-      "Phase 3 OS data must demonstrate statistically significant superiority over Keytruda monotherapy."
-    ],
     thesis: "FDA Breakthrough Therapy designation and compelling synergy with Keytruda position ficerafusp alfa as a leading candidate for major pharma acquisition.",
     mediaSentiment: {
       rating: "Moderately Bullish (70% Bullish)",
@@ -189,7 +191,8 @@ const biotechCompanies = [
     id: "cgon",
     ticker: "CGON",
     name: "CG Oncology",
-    version: "v2.0",
+    version: "v2.1",
+    pdfFile: "reports/pdf/CGON_CG_ONCOLOGY_DOSSIER.pdf",
     headquarters: "Dallas, Texas & Irvine, California, USA",
     ceo: "Arthur Kuan",
     cmo: "Dr. Vijay Kasturi",
@@ -218,6 +221,20 @@ const biotechCompanies = [
     positionSizing: "Market Weight (1.5% Allocation)",
     coreThesis: "Best-in-class NMIBC bladder-sparing asset published in The Lancet Oncology (July 2026) with 75.5% CR and 81% 24-month bladder preservation. Rolling BLA submission completing Q4 2026 backed by $1.076B cash; however, stock is up >300% since IPO, fully pricing in approval.",
     marketDynamics: "$4.2B NMIBC market. BCG-unresponsive patients face radical cystectomy (bladder removal); cretostimogene provides a zero-toxicity outpatient intravesical solution.",
+    bullCase: [
+      "Pivotal Lancet Publication: Phase 3 BOND-003 data published in The Lancet Oncology (July 2026) demonstrated a 75.5% Complete Response rate.",
+      "High Bladder Preservation Rate: 89% 12-month and 81% 24-month bladder preservation avoids invasive radical cystectomy.",
+      "Flawless Safety Profile: Zero Grade 3/4 treatment-related adverse events.",
+      "Massive Cash Fortress: $1.076 Billion in cash with zero debt funding operations through 2029.",
+      "Rolling BLA Submission: Completing in Q4 2026 under Fast Track and Breakthrough status."
+    ],
+    bearCase: [
+      "Fully Priced-In Valuation: Market cap expanded to $6.4B (>300% gain), leaving modest immediate upside.",
+      "Commercial Infrastructure Expansion: Requires establishing specialized urology intravesical delivery salesforces.",
+      "Pipeline Concentration: Valuation depends heavily on cretostimogene approval.",
+      "Intermediate-Risk Readout Risk: PIVOT-006 Phase 3 trial data must demonstrate superiority over surveillance.",
+      "Reimbursement Coding Execution: Establishing buy-and-bill medical codes across urology practices."
+    ],
     pillars: [
       "1. Lancet-Published Efficacy: 75.5% CR rate, 81% 24-month bladder preservation in BOND-003.",
       "2. Zero Grade 3/4 Drug-Related Toxicities.",
@@ -242,20 +259,6 @@ const biotechCompanies = [
       { name: "BOND-003 Cohort C", nct: "NCT04452591", phase: "Phase 3", pop: "High-Risk BCG-Unresponsive NMIBC", endpoint: "75.5% CR rate, 81% 24-mo bladder preservation (Lancet July 2026)" },
       { name: "PIVOT-006", nct: "NCT06114940", phase: "Phase 3", pop: "Intermediate-Risk NMIBC Adjuvant", endpoint: "Recurrence-Free Survival (Topline 1H 2026)" }
     ],
-    bullCase: [
-      "Pivotal Lancet Publication: Phase 3 BOND-003 data published in The Lancet Oncology (July 2026) demonstrated a 75.5% Complete Response rate.",
-      "High Bladder Preservation Rate: 89% 12-month and 81% 24-month bladder preservation avoids invasive radical cystectomy.",
-      "Flawless Safety Profile: Zero Grade 3/4 treatment-related adverse events.",
-      "Massive Cash Fortress: $1.076 Billion in cash with zero debt funding operations through 2029.",
-      "Rolling BLA Submission: Completing in Q4 2026 under Fast Track and Breakthrough status."
-    ],
-    bearCase: [
-      "Fully Priced-In Valuation: Market cap expanded to $6.4B (>300% gain), leaving modest immediate upside.",
-      "Commercial Infrastructure Expansion: Requires establishing specialized urology intravesical delivery salesforces.",
-      "Pipeline Concentration: Valuation depends heavily on cretostimogene approval.",
-      "Intermediate-Risk Readout Risk: PIVOT-006 Phase 3 trial data must demonstrate superiority over surveillance.",
-      "Reimbursement Coding Execution: Establishing buy-and-bill medical codes across urology practices."
-    ],
     thesis: "World-class clinical data and Fast Track/Breakthrough status, but market price reflects full valuation. Recommend accumulating on pullbacks.",
     mediaSentiment: {
       rating: "Extremely Bullish (92% Bullish)",
@@ -275,7 +278,8 @@ const biotechCompanies = [
     id: "sctx",
     ticker: "SCTX",
     name: "Scribe Therapeutics",
-    version: "v2.0",
+    version: "v2.1",
+    pdfFile: "reports/pdf/SCTX_SCRIBE_DOSSIER.pdf",
     headquarters: "San Francisco Bay Area, California, USA",
     ceo: "Benjamin Oakes, Ph.D. (Co-Founder Dr. Jennifer Doudna)",
     cmo: "Clinical Steering Board",
@@ -304,6 +308,20 @@ const biotechCompanies = [
     positionSizing: "Tactical Growth (2.0% Allocation)",
     coreThesis: "High-upside platform entry into next-generation in vivo gene editing. Co-founded by Nobel Laureate Dr. Jennifer Doudna, Scribe engineers custom CasX enzymes ('XE' platform) for epigenetic silencing without double-stranded DNA cuts. $1.5B+ Lilly alliance & Sanofi IPO equity backing.",
     marketDynamics: "$15B cardiovascular gene editing market. Over 40 million patients globally with uncontrolled hypercholesterolemia; STX-1150 provides a single-dose alternative to lifelong statins or mAb injections.",
+    bullCase: [
+      "Scientific Lineage: Co-founded by Nobel Laureate Dr. Jennifer Doudna.",
+      "Epigenetic Silencing Advantage: Avoids double-stranded DNA cuts, mitigating permanent off-target genomic toxicity risks.",
+      "Pharma Validation: $1.5B+ collaboration with Eli Lilly and direct private placement investment from Sanofi.",
+      "Solid Runway: $240M post-IPO cash balance secures operations into early 2029.",
+      "Gene Editing IPO Reopening: Credited with reopening the public market window for gene editing assets."
+    ],
+    bearCase: [
+      "Early Stage Pipeline: STX-1150 is in Phase 1 first-in-human testing (data expected 1H 2027).",
+      "In Vivo Delivery Hurdles: Targeted lipid nanoparticle (LNP) liver delivery optimization.",
+      "RNAi Competition: Facing established commercial therapies like Novartis' Leqvio (inclisiran).",
+      "Intellectual Property Litigation Risk: Ongoing broader CRISPR patent landscapes.",
+      "Capital Intensity: High R&D burn required to advance multiple pipeline candidates."
+    ],
     pillars: [
       "1. Nobel Pedigree: Co-founded by Dr. Jennifer Doudna; proprietary CasX 'XE' enzyme platform.",
       "2. Epigenetic Silencing Safety Advantage: Avoids double-stranded DNA cuts and genomic toxicity.",
@@ -327,20 +345,6 @@ const biotechCompanies = [
       { name: "STX-1150 Phase 1", nct: "First-in-Human Australia", phase: "Phase 1", pop: "Hypercholesterolemia (PCSK9)", endpoint: "LDL-C reduction & safety (1H 2027 data)" },
       { name: "STX-1200", nct: "Preclinical", phase: "Preclinical", pop: "Elevated Lp(a)", endpoint: "LPA epigenetic silencing" }
     ],
-    bullCase: [
-      "Scientific Lineage: Co-founded by Nobel Laureate Dr. Jennifer Doudna.",
-      "Epigenetic Silencing Advantage: Avoids double-stranded DNA cuts, mitigating permanent off-target genomic toxicity risks.",
-      "Pharma Validation: $1.5B+ collaboration with Eli Lilly and direct private placement investment from Sanofi.",
-      "Solid Runway: $240M post-IPO cash balance secures operations into early 2029.",
-      "Gene Editing IPO Reopening: Credited with reopening the public market window for gene editing assets."
-    ],
-    bearCase: [
-      "Early Stage Pipeline: STX-1150 is in Phase 1 first-in-human testing (data expected 1H 2027).",
-      "In Vivo Delivery Hurdles: Targeted lipid nanoparticle (LNP) liver delivery optimization.",
-      "RNAi Competition: Facing established commercial therapies like Novartis' Leqvio (inclisiran).",
-      "Intellectual Property Litigation Risk: Ongoing broader CRISPR patent landscapes.",
-      "Capital Intensity: High R&D burn required to advance multiple pipeline candidates."
-    ],
     thesis: "Reopened the gene-editing IPO market with elite scientific pedigree, validated by tier-1 pharma alliances.",
     mediaSentiment: {
       rating: "Bullish (80% Bullish)",
@@ -360,7 +364,8 @@ const biotechCompanies = [
     id: "mane",
     ticker: "MANE",
     name: "Veradermics",
-    version: "v2.0",
+    version: "v2.1",
+    pdfFile: "reports/pdf/MANE_VERADERMICS_DOSSIER.pdf",
     headquarters: "California, USA",
     ceo: "Executive Medical Board",
     cmo: "Clinical Dermatology Directorate",
@@ -389,6 +394,19 @@ const biotechCompanies = [
     positionSizing: "Growth Allocation (2.5%)",
     coreThesis: "Solves a major compliance problem in an $8.5B out-of-pocket dermatology TAM. Extended-release oral minoxidil tablet VDPHL01 eliminates cardiac hypotension risks. Positive Study 302 topline data (p < 0.001) and $766.8M capital raised secure runway into 2030.",
     marketDynamics: "$8.5B cash-pay consumer aesthetic market. Bypasses insurance reimbursement negotiations; high consumer demand for safer oral alternatives over topical foams.",
+    bullCase: [
+      "Multi-Billion Cash-Pay Market: Solves a major compliance problem in an $8.5B out-of-pocket dermatology TAM.",
+      "Cardiovascular Safety Moat: Proprietary extended-release formulation eliminates systemic hypotension risks.",
+      "Massive Capital Buffer: $766.8M total capital raised extends cash runway into 2030.",
+      "Phase 3 Registration Data: Positive Study 302 topline data (p < 0.001) paves clear FDA registration path.",
+      "Female Pattern Hair Loss Expansion: Active Phase 2/3 Study 306 opens additional consumer market segment."
+    ],
+    bearCase: [
+      "Generic Minoxidil Compounding: Competition from cheap off-label oral minoxidil compounders and telehealth platforms.",
+      "Consumer Cash-Pay Price Sensitivity: Macroeconomic headwinds impacting out-of-pocket aesthetic spending.",
+      "Patent Enforcement Challenges: Defending extended-release formulation patents against generic litigation.",
+      "Commercial Sales Infrastructure: Requires building out dermatology direct-to-consumer and clinic distribution."
+    ],
     pillars: [
       "1. Phase 2/3 Registration Efficacy: Study 302 (n>500) met primary hair count endpoints (p < 0.001).",
       "2. Cardiovascular Safety Moat: Extended-release formulation eliminates blood pressure drops.",
@@ -411,19 +429,6 @@ const biotechCompanies = [
       { name: "Study 304", nct: "NCT06972264", phase: "Phase 3", pop: "Male Registration Trial", endpoint: "2H 2026 Topline Data Readout" },
       { name: "Study 306", nct: "NCT07146022", phase: "Phase 2/3", pop: "Female Alopecia", endpoint: "Active & Recruiting" }
     ],
-    bullCase: [
-      "Multi-Billion Cash-Pay Market: Solves a major compliance problem in an $8.5B out-of-pocket dermatology TAM.",
-      "Cardiovascular Safety Moat: Proprietary extended-release formulation eliminates systemic hypotension risks.",
-      "Massive Capital Buffer: $766.8M total capital raised extends cash runway into 2030.",
-      "Phase 3 Registration Data: Positive Study 302 topline data (p < 0.001) paves clear FDA registration path.",
-      "Female Pattern Hair Loss Expansion: Active Phase 2/3 Study 306 opens additional consumer market segment."
-    ],
-    bearCase: [
-      "Generic Minoxidil Compounding: Competition from cheap off-label oral minoxidil compounders and telehealth platforms.",
-      "Consumer Cash-Pay Price Sensitivity: Macroeconomic headwinds impacting out-of-pocket aesthetic spending.",
-      "Patent Enforcement Challenges: Defending extended-release formulation patents against generic litigation.",
-      "Commercial Sales Infrastructure: Requires building out dermatology direct-to-consumer and clinic distribution."
-    ],
     thesis: "Solves a major compliance problem in a multi-billion consumer cash-pay market with a fast-track Phase 3 registration pathway.",
     mediaSentiment: {
       rating: "Bullish (76% Bullish)",
@@ -443,7 +448,8 @@ const biotechCompanies = [
     id: "apni",
     ticker: "APMD",
     name: "Apnimed",
-    version: "v2.0",
+    version: "v2.1",
+    pdfFile: "reports/pdf/APMD_APNIMED_DOSSIER.pdf",
     headquarters: "Cambridge, Massachusetts, USA",
     ceo: "Larry Miller, M.D.",
     cmo: "Ron Kramer, M.D.",
@@ -472,6 +478,18 @@ const biotechCompanies = [
     positionSizing: "Core Pre-Catalyst (3.0%)",
     coreThesis: "First viable oral pharmacological alternative to CPAP machines in a $12B sleep apnea market with 80%+ CPAP non-compliance rates. LunAIRo Phase 3 showed 46.8% AHI reduction (p < 0.001). FDA NDA accepted with assigned PDUFA Date of February 28, 2027.",
     marketDynamics: "$12B sleep apnea TAM affecting 30M+ US adults. Over 80% of diagnosed patients discontinue cumbersome CPAP masks within 12 months, creating massive demand for once-daily oral pills.",
+    bullCase: [
+      "CPAP Machine Alternative: First viable oral pill option in a $12B sleep apnea TAM.",
+      "80%+ Discontinuation Conversion: Over 80% of diagnosed OSA patients discontinue CPAP hardware within 1 year, driving massive market adoption.",
+      "Phase 3 Statistical Significance: LunAIRo trial (n=660) demonstrated 46.8% mean reduction in Apnea-Hypopnea Index (AHI) (p < 0.001).",
+      "FDA Acceptance: NDA accepted with assigned PDUFA date of February 28, 2027.",
+      "Successful IPO: Raised $192M ($228.8M total capital buffer) on July 31, 2026 at $16.00/share."
+    ],
+    bearCase: [
+      "PDUFA Regulatory Risk: Binary approval risk for novel dual-mechanism combination pill in sleep medicine.",
+      "CPAP Manufacturer Defense: Commercial resistance from established sleep apnea hardware vendors (e.g., ResMed).",
+      "Long-Term Adherence: Monitoring 12-month+ continuation safety data from NCT06566820 extension study."
+    ],
     pillars: [
       "1. Phase 3 Efficacy Superiority: 46.8% AHI reduction vs 6.8% placebo (p < 0.001) in LunAIRo (n=660).",
       "2. PDUFA Date Assigned: FDA NDA accepted with target action date set for February 28, 2027.",
@@ -492,18 +510,6 @@ const biotechCompanies = [
     trials: [
       { name: "LunAIRo", nct: "NCT05811247", phase: "Phase 3", pop: "Sleep Apnea (n=660)", endpoint: "46.8% AHI reduction vs 6.8% placebo (p<0.001)" },
       { name: "SynAIRgy", nct: "NCT05813275", phase: "Phase 3", pop: "Sleep Apnea Combination", endpoint: "Met primary hypoxic burden endpoints" }
-    ],
-    bullCase: [
-      "CPAP Machine Alternative: First viable oral pill option in a $12B sleep apnea TAM.",
-      "80%+ Discontinuation Conversion: Over 80% of diagnosed OSA patients discontinue CPAP hardware within 1 year, driving massive market adoption.",
-      "Phase 3 Statistical Significance: LunAIRo trial (n=660) demonstrated 46.8% mean reduction in Apnea-Hypopnea Index (AHI) (p < 0.001).",
-      "FDA Acceptance: NDA accepted with assigned PDUFA date of February 28, 2027.",
-      "Successful IPO: Raised $192M ($228.8M total capital buffer) on July 31, 2026 at $16.00/share."
-    ],
-    bearCase: [
-      "PDUFA Regulatory Risk: Binary approval risk for novel dual-mechanism combination pill in sleep medicine.",
-      "CPAP Manufacturer Defense: Commercial resistance from established sleep apnea hardware vendors (e.g., ResMed).",
-      "Long-Term Adherence: Monitoring 12-month+ continuation safety data from NCT06566820 extension study."
     ],
     thesis: "First viable oral pharmacological alternative to uncomfortable CPAP machines in a $12B market with 80%+ CPAP non-compliance rates.",
     mediaSentiment: {
@@ -657,7 +663,7 @@ function setupCompanySubnav() {
   });
 }
 
-// Render Active Selected Company Institutional Investment Thesis View (8-Part Structure)
+// Render Active Selected Company Institutional Investment Thesis View (8-Part Structure + Bull/Bear Boxes + PDF Link)
 function renderDossierView(companyId) {
   const container = document.getElementById("active-dossier-container");
   if (!container) return;
@@ -673,10 +679,13 @@ function renderDossierView(companyId) {
           <span class="version-tag">${co.version}</span>
         </div>
         <div style="display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap;">
+          <a href="${co.pdfFile}" target="_blank" class="github-link-btn" style="background:linear-gradient(135deg, #0284c7, #0d9488); border:none; padding:0.45rem 1rem; font-weight:700; color:white; border-radius:var(--radius-sm);">
+            <i class="fa-solid fa-file-pdf"></i> Download PDF Report
+          </a>
           <span class="rec-badge ${co.recClass}" style="font-size:0.9rem; padding:0.4rem 1rem;">
             <i class="fa-solid ${co.recIcon}"></i> ${co.recommendation}
           </span>
-          <span style="font-weight:800; color:var(--accent-teal); font-size:1.2rem;">Institutional Rating Score: ${co.score}/100</span>
+          <span style="font-weight:800; color:var(--accent-teal); font-size:1.2rem;">Score: ${co.score}/100</span>
         </div>
       </div>
 
@@ -710,19 +719,29 @@ function renderDossierView(companyId) {
         <strong>Thesis Statement:</strong> ${co.coreThesis}
       </div>
 
-      <!-- Section 2: Market & Industry Dynamics -->
-      <div class="dossier-sec-title"><i class="fa-solid fa-chart-pie"></i> 2. Market & Industry Dynamics</div>
+      <!-- Section 2: PROMINENT BULL vs BEAR CASE BOXES -->
+      <div class="dossier-sec-title"><i class="fa-solid fa-scale-balanced"></i> 2. Bull Case (Upside Drivers) vs. Bear Case (Operational Risks)</div>
+      <div class="cases-grid">
+        <div class="bull-case-box">
+          <div class="bull-case-title"><i class="fa-solid fa-arrow-trend-up"></i> 🟢 The Bull Case (Institutional Catalysts)</div>
+          <ul class="case-list">
+            ${co.bullCase.map(b => `<li>${b}</li>`).join("")}
+          </ul>
+        </div>
+
+        <div class="bear-case-box">
+          <div class="bear-case-title"><i class="fa-solid fa-arrow-trend-down"></i> 🔴 The Bear Case (Downside Risks)</div>
+          <ul class="case-list">
+            ${co.bearCase.map(b => `<li>${b}</li>`).join("")}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 3: Market & Industry Dynamics -->
+      <div class="dossier-sec-title"><i class="fa-solid fa-chart-pie"></i> 3. Market & Industry Dynamics</div>
       <div style="background:rgba(9, 13, 22, 0.6); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border-glass); margin-bottom:1.5rem; font-size:0.925rem; color:var(--text-muted);">
         <p style="margin-bottom:0.5rem;"><strong style="color:var(--text-main);">Total Addressable Market (TAM):</strong> ${co.tam}</p>
         <p><strong style="color:var(--text-main);">Market Dynamics & Value Proposition:</strong> ${co.marketDynamics}</p>
-      </div>
-
-      <!-- Section 3: Core Investment Rationale & Pillars -->
-      <div class="dossier-sec-title"><i class="fa-solid fa-cubes"></i> 3. Core Investment Rationale & Value Pillars</div>
-      <div style="background:rgba(16, 185, 129, 0.06); border:1px solid rgba(16, 185, 129, 0.25); border-radius:var(--radius-md); padding:1.25rem; margin-bottom:1.5rem;">
-        <ul class="case-list">
-          ${co.pillars.map(p => `<li style="margin-bottom:0.75rem;"><strong style="color:#34d399;">${p.split(':')[0]}:</strong>${p.split(':')[1] || ''}</li>`).join("")}
-        </ul>
       </div>
 
       <!-- Section 4: Clinical Trial Registrations (NCT Identifiers) -->
@@ -824,16 +843,16 @@ function renderDossierView(companyId) {
       </div>
 
       <!-- Section 8: Direct Source Citations & References -->
-      <div class="dossier-sec-title"><i class="fa-solid fa-link"></i> 8. Verified Source Citations & External Links</div>
+      <div class="dossier-sec-title"><i class="fa-solid fa-link"></i> 8. Verified Source Citations & PDF Downloads</div>
       <div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin-bottom:1rem;">
+        <a href="${co.pdfFile}" target="_blank" class="github-link-btn" style="background:linear-gradient(135deg, #0284c7, #0d9488); border:none; padding:0.4rem 0.8rem; font-weight:700; color:white;">
+          <i class="fa-solid fa-file-pdf"></i> Download PDF Memo (${co.ticker})
+        </a>
         ${co.mediaSentiment.links.map(l => `
           <a href="${l.url}" target="_blank" class="github-link-btn" style="padding:0.4rem 0.8rem; font-size:0.825rem; text-decoration:none; background:rgba(56, 189, 248, 0.12); border-color:rgba(56, 189, 248, 0.3); color:var(--text-main);">
             <i class="${l.icon}"></i> ${l.label}
           </a>
         `).join("")}
-        <a href="https://p2pmarketdata.com/articles/investment-thesis/" target="_blank" class="github-link-btn" style="padding:0.4rem 0.8rem; font-size:0.825rem; text-decoration:none; background:rgba(20, 184, 166, 0.15); border-color:rgba(20, 184, 166, 0.3); color:var(--accent-teal);">
-          <i class="fa-solid fa-book"></i> P2P Market Data Thesis Standard
-        </a>
       </div>
 
       <div style="font-size:0.825rem; color:var(--text-dim); margin-top:1rem;">
@@ -913,9 +932,9 @@ function renderMatrixTable(data) {
         </span>
       </td>
       <td>
-        <button class="btn-detail" onclick="openCompanyModal('${co.id}')" style="padding:0.3rem 0.6rem; font-size:0.775rem;">
-          View
-        </button>
+        <a href="${co.pdfFile}" target="_blank" class="btn-detail" style="padding:0.3rem 0.6rem; font-size:0.775rem; text-decoration:none; display:inline-block;">
+          PDF
+        </a>
       </td>
     </tr>
   `).join("");
@@ -1006,7 +1025,7 @@ function setupModal() {
   });
 }
 
-// Open Company Modal with Dynamic Agent Synthesis Content
+// Open Company Modal
 function openCompanyModal(companyId) {
   const co = biotechCompanies.find(c => c.id === companyId);
   if (!co) return;
@@ -1023,9 +1042,14 @@ function openCompanyModal(companyId) {
           <h2 style="font-size:1.8rem; font-weight:800; display:inline; margin-left:0.5rem;">${co.name}</h2>
           <span class="version-tag">${co.version}</span>
         </div>
-        <span class="rec-badge ${co.recClass}" style="font-size:0.9rem; padding:0.4rem 1rem;">
-          <i class="fa-solid ${co.recIcon}"></i> ${co.recommendation}
-        </span>
+        <div style="display:flex; gap:0.5rem; align-items:center;">
+          <a href="${co.pdfFile}" target="_blank" class="github-link-btn" style="background:linear-gradient(135deg, #0284c7, #0d9488); border:none; padding:0.35rem 0.75rem; font-size:0.8rem; font-weight:700; color:white;">
+            <i class="fa-solid fa-file-pdf"></i> Download PDF
+          </a>
+          <span class="rec-badge ${co.recClass}" style="font-size:0.9rem; padding:0.4rem 1rem;">
+            <i class="fa-solid ${co.recIcon}"></i> ${co.recommendation}
+          </span>
+        </div>
       </div>
       <p style="color:var(--text-muted); font-size:0.9rem;">${co.ipoStatus} • Target TAM: <strong>${co.tam}</strong></p>
     `;
@@ -1060,9 +1084,22 @@ function openCompanyModal(companyId) {
         </div>
       </div>
 
-      <div class="modal-sec-title"><i class="fa-solid fa-bullseye"></i> Executive Summary & Core Thesis</div>
-      <div style="background:rgba(56, 189, 248, 0.08); border-left:4px solid var(--accent-cyan); padding:1rem; border-radius:0 var(--radius-sm) var(--radius-sm) 0; font-size:0.925rem; color:var(--text-main); margin-bottom:1rem;">
-        ${co.coreThesis}
+      <!-- Prominent Bull & Bear Cases in Modal -->
+      <div class="modal-sec-title"><i class="fa-solid fa-scale-balanced"></i> Bull Case vs. Bear Case Analysis</div>
+      <div class="cases-grid">
+        <div class="bull-case-box">
+          <div class="bull-case-title"><i class="fa-solid fa-arrow-trend-up"></i> 🟢 The Bull Case</div>
+          <ul class="case-list">
+            ${co.bullCase.map(b => `<li>${b}</li>`).join("")}
+          </ul>
+        </div>
+
+        <div class="bear-case-box">
+          <div class="bear-case-title"><i class="fa-solid fa-arrow-trend-down"></i> 🔴 The Bear Case</div>
+          <ul class="case-list">
+            ${co.bearCase.map(b => `<li>${b}</li>`).join("")}
+          </ul>
+        </div>
       </div>
 
       <div class="modal-sec-title"><i class="fa-solid fa-vial"></i> Clinical Trial Registrations (NCT Identifiers)</div>
