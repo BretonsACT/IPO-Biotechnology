@@ -1,6 +1,7 @@
 /**
  * Biotech IPO Intelligence Suite - Client Script
  * Multi-Agent Biotechnology Investment Research & Analytics
+ * Enhanced with Agent 6: Media, Social & Community Sentiment Monitoring
  */
 
 // Dataset of Analyzed Biotechnology IPO Companies (2024-2026)
@@ -14,6 +15,7 @@ const biotechCompanies = [
     recClass: "rec-strong-buy",
     recIcon: "fa-circle-check",
     score: 88,
+    mediaScore: 91,
     marketCap: "$2.40B",
     enterpriseValue: "$1.25B",
     cashBalance: "$1.22B",
@@ -30,7 +32,13 @@ const biotechCompanies = [
       "Heavy incumbent market competition (Eli Lilly's Mounjaro/Zepbound, Novo Nordisk's Wegovy).",
       "Large-scale peptide manufacturing expansion required for commercial scale."
     ],
-    thesis: "Kailera provides an institutional-grade, de-risked Phase 3 entry into the cardiometabolic megatrend backed by a $1.2B+ cash buffer and top-tier healthcare VC syndicate."
+    thesis: "Kailera provides an institutional-grade, de-risked Phase 3 entry into the cardiometabolic megatrend backed by a $1.2B+ cash buffer and top-tier healthcare VC syndicate.",
+    mediaSentiment: {
+      rating: "Strongly Bullish (88% Bullish)",
+      pressHighlight: "Featured in BioSpace & Endpoints News as largest 2026 biotech IPO; positive Phase 3 ADA 2026 trial readouts.",
+      twitterBuzz: "High cashtag engagement ($KLRA) on challenging Eli Lilly & Novo Nordisk in obesity market.",
+      redditBuzz: "r/stocks & r/StockTitan highlight $1.2B cash runway insulating from near-term dilution."
+    }
   },
   {
     id: "bcax",
@@ -41,6 +49,7 @@ const biotechCompanies = [
     recClass: "rec-spec-buy",
     recIcon: "fa-arrow-trend-up",
     score: 79,
+    mediaScore: 74,
     marketCap: "$1.80B",
     enterpriseValue: "$1.32B",
     cashBalance: "$480M",
@@ -57,7 +66,13 @@ const biotechCompanies = [
       "Single-asset clinical concentration risk tied to FORTIFI-HN01 outcome.",
       "Complex bispecific antibody manufacturing yield optimization."
     ],
-    thesis: "FDA Breakthrough Therapy designation and compelling synergy with Keytruda position ficerafusp alfa as a leading candidate for major pharma acquisition."
+    thesis: "FDA Breakthrough Therapy designation and compelling synergy with Keytruda position ficerafusp alfa as a leading candidate for major pharma acquisition.",
+    mediaSentiment: {
+      rating: "Moderately Bullish (70% Bullish)",
+      pressHighlight: "Board additions (Jeremy Bender, Christy Oliger) announced in July 2026 to prepare for commercial launch.",
+      twitterBuzz: "Discussions under $BCAX tracking routine 10b5-1 executive stock sales.",
+      redditBuzz: "r/biotech views combination with Keytruda as strong big pharma acquisition target."
+    }
   },
   {
     id: "cgon",
@@ -68,6 +83,7 @@ const biotechCompanies = [
     recClass: "rec-hold",
     recIcon: "fa-pause-circle",
     score: 68,
+    mediaScore: 94,
     marketCap: "$6.40B",
     enterpriseValue: "$5.81B",
     cashBalance: "$590M",
@@ -84,7 +100,13 @@ const biotechCompanies = [
       "Current valuation ($6.4B) fully prices in BLA approval and near-term commercial execution.",
       "Requires establishing specialized intravesical delivery commercial infrastructure."
     ],
-    thesis: "World-class clinical data and Fast Track/Breakthrough status, but market price reflects full valuation. Recommend accumulating on pullbacks."
+    thesis: "World-class clinical data and Fast Track/Breakthrough status, but market price reflects full valuation. Recommend accumulating on pullbacks.",
+    mediaSentiment: {
+      rating: "Extremely Bullish (92% Bullish)",
+      pressHighlight: "Pivotal BOND-003 trial published in The Lancet Oncology (July 2026); BLA filing on track for Q4 2026.",
+      twitterBuzz: "Urology specialists on X praise 89% 12-month bladder preservation as a clinical paradigm shift.",
+      redditBuzz: "r/biotech & r/stocks highlight quality-of-life benefits over radical surgery."
+    }
   },
   {
     id: "sctx",
@@ -95,6 +117,7 @@ const biotechCompanies = [
     recClass: "rec-spec-buy",
     recIcon: "fa-dna",
     score: 76,
+    mediaScore: 83,
     marketCap: "$850M",
     enterpriseValue: "$610M",
     cashBalance: "$240M",
@@ -111,7 +134,13 @@ const biotechCompanies = [
       "In vivo CRISPR off-target editing safety validation.",
       "Early clinical stage development horizon."
     ],
-    thesis: "Reopened the gene-editing IPO market with elite scientific pedigree, validated by tier-1 pharma alliances."
+    thesis: "Reopened the gene-editing IPO market with elite scientific pedigree, validated by tier-1 pharma alliances.",
+    mediaSentiment: {
+      rating: "Bullish (80% Bullish)",
+      pressHighlight: "Credited by Fierce Biotech with reopening the in vivo gene editing IPO window; Eli Lilly & Sanofi milestone backing.",
+      twitterBuzz: "Cashtag $SCTX tracking co-founder Jennifer Doudna's scientific presentations.",
+      redditBuzz: "r/StockTitan praises proprietary CasX enzyme engineering over standard Cas9."
+    }
   },
   {
     id: "mane",
@@ -122,6 +151,7 @@ const biotechCompanies = [
     recClass: "rec-spec-buy",
     recIcon: "fa-arrow-trend-up",
     score: 77,
+    mediaScore: 80,
     marketCap: "$1.10B",
     enterpriseValue: "$790M",
     cashBalance: "$310M",
@@ -138,7 +168,13 @@ const biotechCompanies = [
       "Competition from generic off-label minoxidil compounders and telehealth platforms.",
       "Consumer cash-pay market adoption sensitivity."
     ],
-    thesis: "Solves a major compliance problem in a multi-billion consumer cash-pay market with a fast-track Phase 3 registration pathway."
+    thesis: "Solves a major compliance problem in a multi-billion consumer cash-pay market with a fast-track Phase 3 registration pathway.",
+    mediaSentiment: {
+      rating: "Bullish (76% Bullish)",
+      pressHighlight: "Featured in aesthetic dermatology press for Phase 3 oral minoxidil micro-dosing safety profile.",
+      twitterBuzz: "Dermatology KOL discussions focus on solving compliance and systemic side-effect hurdles.",
+      redditBuzz: "r/tressless & r/stocks show high consumer interest for safer oral hair loss alternative."
+    }
   },
   {
     id: "apni",
@@ -149,6 +185,7 @@ const biotechCompanies = [
     recClass: "rec-watch",
     recIcon: "fa-eye",
     score: 82,
+    mediaScore: 86,
     marketCap: "$750M (Est)",
     enterpriseValue: "$590M (Est)",
     cashBalance: "$160M (Target)",
@@ -165,7 +202,13 @@ const biotechCompanies = [
       "Regulatory approval hurdles for novel oral combination mechanism in sleep medicine.",
       "CPAP market incumbent resistance."
     ],
-    thesis: "First viable oral pharmacological alternative to uncomfortable CPAP machines in a $12B market with 80%+ CPAP non-compliance rates."
+    thesis: "First viable oral pharmacological alternative to uncomfortable CPAP machines in a $12B market with 80%+ CPAP non-compliance rates.",
+    mediaSentiment: {
+      rating: "Bullish Pre-IPO (84% Bullish)",
+      pressHighlight: "S-1 filing covered across healthcare financial press for disruptor potential in CPAP market.",
+      twitterBuzz: "Sleep medicine researchers highlight high demand for non-CPAP oral therapies.",
+      redditBuzz: "Patient advocacy and investor subreddits note 80%+ CPAP discontinuation rate as major TAM driver."
+    }
   }
 ];
 
@@ -200,6 +243,12 @@ const agentSpecs = [
     file: "05_investment_committee_agent.md",
     name: "Investment Committee Synthesizer",
     desc: "Synthesizes multi-agent scores into weighted institutional investment ratings (Strong Buy, Speculative Buy, Hold, Avoid) and drafts full investment memos."
+  },
+  {
+    num: "6",
+    file: "06_media_sentiment_agent.md",
+    name: "Media, Social & Sentiment Monitor",
+    desc: "Scans healthcare press (BioSpace, The Lancet), Twitter/X cashtag engagement, Reddit investor subreddits (r/biotech, r/stocks), and insider trading sentiment."
   }
 ];
 
@@ -250,8 +299,8 @@ function renderCards(data) {
             <span class="metric-lbl">Cash Runway</span>
           </div>
           <div class="metric-item">
-            <span class="metric-val">${co.grossRaise}</span>
-            <span class="metric-lbl">IPO Raise</span>
+            <span class="metric-val" style="color:var(--accent-purple);">${co.mediaScore}/100</span>
+            <span class="metric-lbl">Media Buzz</span>
           </div>
         </div>
 
@@ -290,7 +339,7 @@ function renderMatrixTable(data) {
       <td><span style="font-size:0.825rem;">${co.clinicalPhase}</span></td>
       <td><strong>${co.marketCap}</strong></td>
       <td><span style="color:var(--accent-teal); font-weight:700;">${co.cashRunway}</span></td>
-      <td>${co.tam}</td>
+      <td><strong style="color:var(--accent-purple);">${co.mediaScore}/100</strong></td>
       <td><strong style="color:var(--accent-teal);">${co.score}/100</strong></td>
       <td>
         <span class="rec-badge ${co.recClass}">
@@ -435,13 +484,21 @@ function openCompanyModal(companyId) {
           <span class="metric-lbl">Implied Runway</span>
         </div>
         <div class="metric-item">
-          <span class="metric-val">${co.grossRaise}</span>
-          <span class="metric-lbl">Gross IPO Raise</span>
+          <span class="metric-val" style="color:var(--accent-purple);">${co.mediaScore}/100</span>
+          <span class="metric-lbl">Media Sentiment</span>
         </div>
         <div class="metric-item">
           <span class="metric-val" style="color:var(--accent-cyan);">${co.score}/100</span>
           <span class="metric-lbl">Agent Composite</span>
         </div>
+      </div>
+
+      <div class="modal-sec-title"><i class="fa-solid fa-newspaper"></i> Agent 6: Media, Twitter/X & Reddit Sentiment Audit</div>
+      <div style="background:rgba(139, 92, 246, 0.08); border-left:4px solid var(--accent-purple); padding:0.85rem; border-radius:0 var(--radius-sm) var(--radius-sm) 0; font-size:0.9rem; margin-bottom:1rem;">
+        <p style="margin-bottom:0.4rem;"><strong>Overall Sentiment Rating:</strong> <span style="color:var(--accent-purple); font-weight:700;">${co.mediaSentiment.rating}</span></p>
+        <p style="margin-bottom:0.4rem;"><strong>Press Highlights:</strong> ${co.mediaSentiment.pressHighlight}</p>
+        <p style="margin-bottom:0.4rem;"><strong>Twitter / X Buzz:</strong> ${co.mediaSentiment.twitterBuzz}</p>
+        <p><strong>Reddit Community Sentiment:</strong> ${co.mediaSentiment.redditBuzz}</p>
       </div>
 
       <div class="modal-sec-title"><i class="fa-solid fa-flask"></i> Clinical & Scientific Evaluation</div>
