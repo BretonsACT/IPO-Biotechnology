@@ -1,47 +1,19 @@
-# Agent 7: Deep Dossier & Comprehensive Research Agent (`deep_dossier_agent`)
+# Agent 7: Deep Dossier Research Compiler Agent (`deep_dossier_agent`)
+
+> **LLM Engine**: `Claude Opus 4.6 (pro)` — Institutional Investment Thesis Synthesis & Dossier Compiler
 
 ## 🎯 Role Overview
-The **Deep Dossier & Comprehensive Research Agent** acts as an exhaustive institutional intelligence compiler. It synthesizes findings from all prior agents and performs deep-dive primary source verification to produce individual, multi-page dossiers per company. Every dossier includes executive leadership profiles, clinical trial NCT identifiers, balance sheet cash runways, Total Addressable Market (TAM) models, patent estate cliffs, 5-point Bull vs Bear cases, and direct clickable web citations.
+The **Deep Dossier Research Compiler Agent** is powered by **Claude Opus 4.6**. It compiles all multi-agent research outputs into standardized, multi-page **8-part institutional investment thesis dossiers** strictly following the P2P Market Data framework standard.
 
 ---
 
-## 📋 Core Responsibilities & Scope
-1. **Corporate & Leadership Profiling**:
-   - Headquarters location, founding history, corporate structure.
-   - C-suite executive background (CEO, CMO, CFO, CTO, CCO).
-2. **Granular Clinical Trial Audit (ClinicalTrials.gov & Journals)**:
-   - Trial registration identifiers (NCT numbers, e.g. NCT07284875, NCT06788990, NCT04452591, NCT05811247).
-   - Sample sizes ($n$), patient populations, primary/secondary endpoints, response rates (CR %, ORR %, AHI reduction %, OS months), $p$-values, and safety profiles.
-3. **Financial Runway & Licensing Deal Structures**:
-   - Gross/net IPO proceeds, cash & marketable securities, quarterly cash burn, implied cash runway buffer (with target year), underwriting syndicate, and licensing milestone obligations (e.g., Hengrui Pharma, Eli Lilly, Sanofi).
-4. **Bull vs Bear Investment Case Synthesis**:
-   - 5 granular institutional Bull Case drivers (upside catalysts).
-   - 5 granular institutional Bear Case risks (operational & clinical headwinds).
-5. **Direct Source Attribution & Citation Links**:
-   - Link all claims directly to SEC filings, clinical trial pages, medical journals (*The Lancet Oncology*), news press (*BioSpace*, *Fierce Biotech*, *Endpoints News*), and social platforms (Twitter/X, Reddit).
+## 📋 Standard 8-Part Dossier Structure (Claude Opus 4.6 Framework)
 
----
-
-## 📊 Standard Output Schema (JSON & Markdown)
-
-```json
-{
-  "company_name": "Kailera Therapeutics",
-  "ticker": "KLRA",
-  "version": "v1.0.0",
-  "headquarters": "Waltham, Massachusetts, USA",
-  "ceo": "Ron Renaud",
-  "cmo": "Scott Wasserman, M.D.",
-  "cfo": "Douglas W. Pagan",
-  "licensing_partner": "Jiangsu Hengrui Pharmaceuticals ($110M upfront, $200M milestones)",
-  "cash_runway_year": "Mid-2028 (56 Months)",
-  "bull_case_points": 5,
-  "bear_case_points": 5,
-  "clinical_trials_nct": ["NCT07284875", "NCT07284901", "NCT07284979"],
-  "source_citations": [
-    "https://clinicaltrials.gov/study/NCT07284875",
-    "https://www.biospace.com/article/kailera-therapeutics-ipo",
-    "https://www.thelancet.com"
-  ]
-}
-```
+1. **Executive Summary & Core Thesis Statement**: Target price, implied upside %, investment horizon, recommended position sizing, elevator pitch.
+2. **Company Overview & Leadership**: Full founding history, executive backgrounds (CEO, CMO, CFO, CTO), board members, headquarters, employee count.
+3. **IPO & Capital Structure**: IPO date, offer price, gross proceeds, lead bookrunners, 180-day lock-up expiration, insider ownership %, follow-on offerings.
+4. **Market & Industry Dynamics**: Total Addressable Market (TAM) breakdown ($B), epidemiology, standard-of-care benchmarks, out-of-pocket vs insurance reimbursement.
+5. **Clinical Pipeline & Trial Data**: Complete trial tables with NCT identifiers (`NCT07284875`, `NCT06788990`, `NCT04452591`, `NCT05811247`, `NCT06724614`), enrollment ($n$), efficacy endpoints (ORR, CR, PFS, OS, weight loss %, AHI reduction), $p$-values, and Grade 3/4 safety profiles.
+6. **Valuation Framework & Scenario Matrix**: Probability-weighted scenario table (**Bear Case**, **Base Case**, **Bull Case**) with market caps, target prices, and expected returns.
+7. **Bull Case vs Bear Case Analysis**: Side-by-side callout boxes detailing institutional growth catalysts (bull) and operational/clinical risks (bear) paired with concrete mitigations.
+8. **Catalyst Timeline & Source Citations**: Chronological milestone roadmap and verified external URLs (BioSpace, Lancet, ClinicalTrials.gov, Twitter/X, Reddit).

@@ -1,56 +1,27 @@
-# Agent 4: Risk, Patent & Market Landscape Agent (`risk_market_agent`)
+# Agent 4: Risk, Patent & Market Agent (`risk_market_agent`)
+
+> **LLM Engine**: `Claude Opus 4.6 (pro)` — Total Addressable Market (TAM) & Intellectual Property Audit
 
 ## 🎯 Role Overview
-The **Risk, Patent & Market Landscape Agent** investigates external threats, total addressable market (TAM), competitive positioning against incumbent drug giants, patent estate longevity, Freedom to Operate (FTO), and regulatory/commercial bottlenecks.
+The **Risk, Patent & Market Agent** uses **Claude Opus 4.6** to audit macro market dynamics, Total Addressable Market (TAM) expansions, patent estate longevity (composition of matter cliffs $>2038$), commercial standard-of-care moats, and operational/CDMO supply chain risks.
 
 ---
 
 ## 📋 Core Responsibilities & Scope
-1. **Total Addressable Market (TAM) Modeling**:
-   - Patient epidemiology (Incidence & Prevalence rates).
-   - Drug pricing power & reimbursement benchmarks (US/EU/Japan).
-   - Peak Penetration Percentage assumptions.
-2. **Competitive Moat Analysis**:
-   - Direct competitors in active development (same target vs differentiated target).
-   - Commercial incumbent standard of care (e.g., Keytruda for head & neck, Zepbound/Wegovy for obesity).
-   - Differentiating features (e.g., oral vs subcutaneous delivery, lower toxicity, longer dosing interval).
-3. **Patent Estate & Intellectual Property (IP)**:
-   - Composition of Matter patent expiration dates (target: $> 2038$).
-   - Method of Use / Formulation patent coverage.
-   - Licensing litigation risk or third-party royalty obligations.
-4. **Commercialization & Manufacturing Infrastructure**:
-   - In-house vs CDMO (Contract Development and Manufacturing Organization) dependence.
-   - Complex modality manufacturing risks (cell/gene therapy, viral vectors, radiopharmaceuticals).
+1. **Total Addressable Market (TAM) Estimation**: Model patient epidemiology, out-of-pocket cash-pay dynamics vs insurance reimbursement, and peak global market size ($B).
+2. **Intellectual Property & Patent Estate Audit**: Verify composition of matter patents, formulation patents, expiration dates (>2038-2043), and freedom-to-operate (FTO) vs broad platform litigation risks (e.g. CRISPR Cas9 patent wars).
+3. **Competitive Moat Evaluation**: Assess barriers to entry against generic compounding, incumbent price wars (Eli Lilly, Novo Nordisk, Keytruda), and novel pipeline threats.
+4. **Downside Risk & Mitigation Matrix**: Pair every identified clinical, operational, or regulatory risk directly with concrete company mitigation tactics.
 
 ---
 
-## ⚠️ Risk Evaluation Matrix
+## ⚙️ Standard Operating Procedure (SOP)
 
-```
-   HIGH    │  [Med Risk]       [High Risk]      [CRITICAL AVOID]
-           │
-   MED     │  [Low Risk]       [Med Risk]       [High Risk]
- LIKELIHOOD│
-   LOW     │  [Minimal Risk]   [Low Risk]       [Med Risk]
-           └─────────────────────────────────────────────────
-                 LOW             MEDIUM            HIGH
-                                IMPACT
-```
-
----
-
-## 📊 Standard Output Schema (JSON & Markdown)
-
-```json
-{
-  "company_name": "Bicara Therapeutics",
-  "ticker": "BCAX",
-  "target_indication": "Head & Neck Squamous Cell Carcinoma (HNSCC)",
-  "tam_usd_b": 6.5,
-  "competitive_landscape": "High competition from Merck (Keytruda), but ficerafusp alfa shows synergy when combined with pembrolizumab",
-  "patent_expiry_year": 2041,
-  "manufacturing_risk": "Moderate (Complex bispecific antibody manufacturing)",
-  "overall_risk_rating": "Moderate",
-  "risk_score": 75
-}
+```mermaid
+graph TD
+    A[SEC Filings / Patent Databases / Market Data] --> B[Risk & Market Agent - Claude Opus 4.6]
+    B --> C[Audit Patent Expiration Dates & FTO]
+    B --> D[Evaluate TAM & Commercial Moat]
+    C & D --> E[Formulate Risk Mitigation Matrix]
+    E --> F[Generate Risk Score & Supply Chain Assessment]
 ```

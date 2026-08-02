@@ -1,7 +1,9 @@
 # Agent 1: IPO Scanner & Discovery Agent (`ipo_scanner_agent`)
 
+> **LLM Engine**: `Claude Opus 4.6 (pro)` — High-Precision Financial Data Extraction & Regulatory Audit
+
 ## 🎯 Role Overview
-The **IPO Scanner & Discovery Agent** is the primary intake module of the Biotech Investment Intelligence Pipeline. It continuously monitors regulatory filings, SEC Form S-1/S-1A submissions, preliminary prospectuses, and IPO calendars to identify upcoming and recent biotechnology initial public offerings (2024–2026).
+The **IPO Scanner & Discovery Agent** is the primary intake module of the Biotech Investment Intelligence Pipeline. Executing on **Claude Opus 4.6**, it continuously monitors regulatory filings, SEC Form S-1/S-1A submissions, preliminary prospectuses, and IPO calendars to identify upcoming and recent biotechnology initial public offerings (2024–2026).
 
 ---
 
@@ -11,7 +13,7 @@ The **IPO Scanner & Discovery Agent** is the primary intake module of the Biotec
    - File Price Range & Final IPO Offer Price.
    - Total Shares Offered & Greenshoe Option (Over-allotment).
    - Gross & Net Expected Proceeds.
-   - Lead Underwriters & Syndicate (e.g., J.P. Morgan, Jefferies, Morgan Stanley, Leerink Partners).
+   - Lead Underwriters & Syndicate (e.g., J.P. Morgan, Jefferies, Morgan Stanley, Leerink Partners, Goldman Sachs).
 3. **Lock-Up & Insider Ownership**: Audit 180-day lock-up agreements, insider buying participation at IPO (e.g., existing venture capital backing), and float concentration.
 4. **IPO Classification**: Categorize companies into **Recent Debuts** (post-IPO trading < 24 months) or **Upcoming Filings** (active S-1 on deck).
 
@@ -21,7 +23,7 @@ The **IPO Scanner & Discovery Agent** is the primary intake module of the Biotec
 
 ```mermaid
 graph TD
-    A[SEC EDGAR / IPO Filings] --> B[IPO Scanner Agent]
+    A[SEC EDGAR / IPO Filings] --> B[IPO Scanner Agent - Claude Opus 4.6]
     B --> C{Filter Criteria Met?}
     C -- Yes --> D[Extract Offering Terms & Capital Raised]
     C -- No --> E[Discard non-biotech/micro-cap]
@@ -33,6 +35,7 @@ graph TD
 - **Sector**: Human Therapeutics, Gene Editing, Radiopharmaceuticals, Oncology, Immunology, Metabolic Diseases.
 - **Minimum Raise**: $\ge \$50\text{ Million}$ (excludes penny-stock shell IPOs).
 - **Listing Exchange**: NASDAQ Global Select / Global Market, NYSE.
+- **LLM Reasoning**: Claude Opus 4.6 for cross-referencing S-1 prospectus amendments and syndicate agreements.
 
 ---
 
@@ -40,21 +43,16 @@ graph TD
 
 ```json
 {
-  "company_name": "Kailera Therapeutics",
   "ticker": "KLRA",
-  "ipo_date": "2026-04",
-  "ipo_status": "Recent IPO",
-  "offer_price": 20.00,
-  "gross_proceeds_usd_m": 625.0,
-  "lead_underwriters": ["Bain Capital", "Jefferies", "Morgan Stanley"],
-  "insider_participation_pct": 45.0,
-  "lockup_expiry_days": 180,
-  "pre_ipo_vcs": ["Bain Capital Life Sciences", "Atlas Venture", "RTW Investments"]
+  "company_name": "Kailera Therapeutics",
+  "model_engine": "Claude Opus 4.6",
+  "exchange": "NASDAQ",
+  "ipo_date": "2026-04-17",
+  "offer_price": 16.00,
+  "shares_offered": 44900000,
+  "gross_proceeds_usd": 718800000,
+  "lead_underwriters": ["J.P. Morgan", "Jefferies", "Leerink Partners", "TD Cowen", "Evercore ISI", "William Blair"],
+  "lockup_expiration": "2026-10-14",
+  "vc_backers": ["Bain Capital Life Sciences", "RTW Investments", "Atlas Venture", "Jiangsu Hengrui (19.9%)"]
 }
 ```
-
----
-
-## 🔍 Quality Assurance & Guardrails
-- **No OTC / Micro-cap Noise**: Excludes OTC-bulletin-board shell companies.
-- **Accurate Historical Tracking**: Cross-checks IPO offering price against current market trading prices to calculate percentage gain/loss since debut.

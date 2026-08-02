@@ -1,53 +1,30 @@
 # Agent 3: Financial Health & Valuation Agent (`financial_valuation_agent`)
 
+> **LLM Engine**: `Claude Opus 4.6 (pro)` — Quantitative Balance Sheet Modeling & Runway Calculation
+
 ## 🎯 Role Overview
-The **Financial Health & Valuation Agent** performs quantitative analysis of the company's financial condition, cash runway, net burn rate, capitalization structure, enterprise value (EV), and valuation metrics relative to clinical peers.
+The **Financial Health & Valuation Agent** leverages **Claude Opus 4.6** to perform quantitative modeling of cash burn rates, enterprise value (EV), risk-adjusted Net Present Value (rNPV) valuations, and financial runway buffers across all analyzed IPO candidates.
 
 ---
 
 ## 📋 Core Responsibilities & Scope
-1. **Cash Runway Calculation**:
-   $$\text{Cash Runway (Months)} = \frac{\text{Cash, Cash Equivalents \& Short-term Investments}}{\text{Average Quarterly Net Operating Cash Burn}} \times 3$$
-   - Determine if cash runway extends beyond major clinical trial data readouts (Catalyst Buffer).
-2. **Capitalization & Dilution Risk**:
-   - Total Shares Outstanding (Basic vs Diluted).
-   - Outstanding Warrants, Options, and Convertible Debt overhang.
-   - Secondary Offering Likelihood (if cash runway $< 12$ months).
-3. **Valuation Frameworks**:
-   - **Market Capitalization vs Enterprise Value**: $\text{EV} = \text{Market Cap} + \text{Total Debt} - \text{Cash}$.
-   - **Risk-Adjusted Net Present Value (rNPV)**: Accounting for Probability of Success (PoS) per clinical phase:
-     - Phase 1 $\rightarrow$ 10–15% PoS
-     - Phase 2 $\rightarrow$ 25–40% PoS
-     - Phase 3 $\rightarrow$ 60–75% PoS
-     - NDA/BLA Submission $\rightarrow$ 85–90% PoS
-   - **Peak Sales Multiples**: Benchmarking vs commercial-stage peer multiples ($3.0\text{x}$–$5.0\text{x}$ estimated peak sales).
+1. **Balance Sheet & Cash Audit**: Calculate net cash and marketable securities, debt/convertible notes, gross IPO proceeds, and follow-on equity offerings.
+2. **Burn Rate & Runway Modeling**: Compute average quarterly R&D expenditure, G&A operational overhead, net quarterly burn rate, and implied cash runway in months.
+3. **Enterprise Value & Market Cap Metrics**: Compute Market Capitalization, Enterprise Value (EV = Market Cap - Cash + Debt), and valuation multiples relative to sector benchmarks.
+4. **Valuation Scenario Matrix**: Build probability-weighted scenario models (**Bear Case**, **Base Case**, **Bull Case**) with target share prices and expected return percentages.
 
 ---
 
-## 💵 Financial Metric Benchmark Standards
+## ⚙️ Financial Runway Calculation Formula
 
-| Metric | Healthy / Low Risk | Moderate Risk | High Dilution / Critical Risk |
-| :--- | :--- | :--- | :--- |
-| **Cash Runway** | $> 24\text{ Months}$ | $12\text{--}24\text{ Months}$ | $< 12\text{ Months}$ |
-| **Gross IPO Raise** | $> \$250\text{M}$ | $\$100\text{M}\text{--}\$250\text{M}$ | $< \$100\text{M}$ |
-| **Debt Level** | $\$0$ (Pure Equity) | $< 15\%$ Total Assets | Convertible Debt / Debt Covenants |
-| **Institutional Backing** | Tier-1 VCs (Bain, OrbiMed, RTW) | Mid-tier Funds | Retail Heavy / Undisclosed |
+$$\text{Implied Runway (Months)} = \left( \frac{\text{Cash \& Marketable Securities}}{\text{Quarterly Net Operating Burn}} \right) \times 3$$
 
 ---
 
-## 📊 Standard Output Schema (JSON & Markdown)
+## 📊 Standard Valuation Scenario Matrix Schema (Claude Opus 4.6)
 
-```json
-{
-  "company_name": "Kailera Therapeutics",
-  "ticker": "KLRA",
-  "market_cap_usd_m": 2400.0,
-  "enterprise_value_usd_m": 1250.0,
-  "cash_balance_usd_m": 1225.0,
-  "quarterly_burn_usd_m": 65.0,
-  "implied_runway_months": 56.5,
-  "cash_runway_status": "Excellent (Extends past Phase 3 readouts)",
-  "dilution_risk": "Low",
-  "financial_score": 90
-}
-```
+| Valuation Scenario | Probability Weight | Implied Market Cap | Implied Share Price | Expected Return % |
+| :--- | :--- | :--- | :--- | :--- |
+| **Bear Case Scenario** | 20% – 30% | Discounted Liquidation Value | Downside Target | Target Return % |
+| **Base Case Scenario** | 50% – 60% | Probability-Weighted rNPV | Base Target Price | Base Upside % |
+| **Bull Case Scenario** | 20% – 25% | Commercial Peak Sales Multiple | Premium Target Price | Maximum Upside % |

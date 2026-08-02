@@ -570,42 +570,49 @@ const agentSpecs = [
     num: "1",
     file: "01_ipo_scanner_agent.md",
     name: "IPO Scanner & Discovery Agent",
+    model: "Claude Opus 4.6 (pro)",
     desc: "Monitors SEC Form S-1/S-1A filings, target valuations, syndicate underwriters, lock-up expiration dates, and initial offering price ranges."
   },
   {
     num: "2",
     file: "02_clinical_pipeline_agent.md",
     name: "Clinical Pipeline Evaluator Agent",
+    model: "Claude Opus 4.6 (pro)",
     desc: "Audits primary trial endpoints (CR, ORR, PFS, DOR), statistical significance, adverse event safety profiles, and FDA designations (Fast Track, Breakthrough)."
   },
   {
     num: "3",
     file: "03_financial_valuation_agent.md",
     name: "Financial Health & Valuation Agent",
+    model: "Claude Opus 4.6 (pro)",
     desc: "Calculates cash runway buffers, quarterly net operating burn, enterprise value (EV), rNPV valuation models, and equity dilution risk."
   },
   {
     num: "4",
     file: "04_risk_market_agent.md",
     name: "Risk, Patent & Market Agent",
+    model: "Claude Opus 4.6 (pro)",
     desc: "Evaluates Total Addressable Market (TAM), patent estate longevity (>2038 composition of matter), competitive standard of care moat, and CDMO manufacturing risks."
   },
   {
     num: "5",
     file: "05_investment_committee_agent.md",
     name: "Investment Committee Synthesizer",
+    model: "Claude Opus 4.6 (pro)",
     desc: "Synthesizes multi-agent scores into weighted institutional investment ratings (Strong Buy, Speculative Buy, Hold, Avoid) and drafts full investment memos."
   },
   {
     num: "6",
     file: "06_media_sentiment_agent.md",
     name: "Media, Social & Sentiment Monitor",
+    model: "Claude Opus 4.6 (pro)",
     desc: "Scans healthcare press (BioSpace, The Lancet), Twitter/X cashtag engagement, Reddit investor subreddits (r/biotech, r/stocks), and insider trading sentiment."
   },
   {
     num: "7",
     file: "07_deep_dossier_agent.md",
     name: "Deep Dossier Research Compiler",
+    model: "Claude Opus 4.6 (pro)",
     desc: "Compiles 8-part institutional investment thesis dossiers based on P2P Market Data standards, complete with valuation scenario matrices and catalyst roadmaps."
   }
 ];
@@ -987,6 +994,7 @@ function renderAgentCards(specs) {
         <div class="agent-num">0${a.num}</div>
         <div>
           <h4 class="agent-title">${a.name}</h4>
+          <span class="version-tag" style="background:rgba(139,92,246,0.15); color:var(--accent-purple); border-color:rgba(139,92,246,0.3); font-size:0.7rem;"><i class="fa-solid fa-brain"></i> ${a.model}</span>
           <span class="agent-file">${a.file}</span>
         </div>
       </div>
