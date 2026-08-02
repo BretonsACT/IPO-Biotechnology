@@ -1,4 +1,4 @@
-# 🧬 Multi-Agent System Architecture for Biotech IPO Intelligence `v2.2`
+# 🧬 Multi-Agent System Architecture for Biotech IPO Intelligence `v2.3`
 
 This directory contains the formal markdown specifications and execution rules for the 7 autonomous agents designed to evaluate biotechnology companies with recent or upcoming Initial Public Offerings (IPOs).
 

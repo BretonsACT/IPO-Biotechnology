@@ -1,10 +1,10 @@
 /**
  * Biotech IPO Intelligence Suite - Client Script
- * Version: 2.2.0 (Enhanced Deep-Research Reports, Corrected Data, PDF Downloads)
+ * Version: 2.3.0 (Enhanced Deep-Research Reports, Corrected Data, PDF Downloads)
  * Professional Institutional Investment Thesis Standard
  */
 
-const APP_VERSION = "2.2.0";
+const APP_VERSION = "2.3.0";
 
 // Dataset of Analyzed Biotechnology IPO Companies (2024-2026)
 const biotechCompanies = [
@@ -12,7 +12,7 @@ const biotechCompanies = [
     id: "klra",
     ticker: "KLRA",
     name: "Kailera Therapeutics",
-    version: "v2.2",
+    version: "v2.3",
     pdfFile: "reports/pdf/KLRA_KAILERA_DOSSIER.pdf",
     headquarters: "Waltham, Massachusetts, USA",
     ceo: "Ron Renaud (President & CEO)",
@@ -115,7 +115,7 @@ const biotechCompanies = [
     id: "bcax",
     ticker: "BCAX",
     name: "Bicara Therapeutics",
-    version: "v2.2",
+    version: "v2.3",
     pdfFile: "reports/pdf/BCAX_BICARA_DOSSIER.pdf",
     headquarters: "Boston, Massachusetts, USA",
     ceo: "Claire Mazumdar, Ph.D., MBA (Founder & CEO)",
@@ -206,7 +206,7 @@ const biotechCompanies = [
     id: "cgon",
     ticker: "CGON",
     name: "CG Oncology",
-    version: "v2.2",
+    version: "v2.3",
     pdfFile: "reports/pdf/CGON_CG_ONCOLOGY_DOSSIER.pdf",
     headquarters: "Dallas, Texas & Irvine, California, USA",
     ceo: "Arthur Kuan (Chairman, President & CEO)",
@@ -301,7 +301,7 @@ const biotechCompanies = [
     id: "sctx",
     ticker: "SCTX",
     name: "Scribe Therapeutics",
-    version: "v2.2",
+    version: "v2.3",
     pdfFile: "reports/pdf/SCTX_SCRIBE_DOSSIER.pdf",
     headquarters: "San Francisco Bay Area, California, USA",
     ceo: "Benjamin Oakes, Ph.D. (CEO; Co-founded with Nobel Laureate Dr. Jennifer Doudna & Dr. David Savage)",
@@ -389,7 +389,7 @@ const biotechCompanies = [
     id: "mane",
     ticker: "MANE",
     name: "Veradermics",
-    version: "v2.2",
+    version: "v2.3",
     pdfFile: "reports/pdf/MANE_VERADERMICS_DOSSIER.pdf",
     headquarters: "California, USA",
     ceo: "Reid Waldman, M.D. (CEO & Co-founder)",
@@ -475,7 +475,7 @@ const biotechCompanies = [
     id: "apni",
     ticker: "APMD",
     name: "Apnimed",
-    version: "v2.2",
+    version: "v2.3",
     pdfFile: "reports/pdf/APMD_APNIMED_DOSSIER.pdf",
     headquarters: "Cambridge, Massachusetts, USA",
     ceo: "Kevin R. Lind (CEO since June 2026 — NEW; replaced founder Larry Miller)",
