@@ -1,8 +1,11 @@
 /**
  * Biotech IPO Intelligence Suite - Client Script
+ * Version: 1.0.0
  * Multi-Agent Biotechnology Investment Research & Analytics
- * Enhanced with Deep Clinical Research, Granular NCT Identifiers & Cash Runway Projections
+ * Features: Multi-page Deep Dives, Bull vs Bear Investment Cases, Granular NCT Clinical Trials
  */
+
+const APP_VERSION = "1.0.0";
 
 // Dataset of Analyzed Biotechnology IPO Companies (2024-2026)
 const biotechCompanies = [
@@ -10,6 +13,7 @@ const biotechCompanies = [
     id: "klra",
     ticker: "KLRA",
     name: "Kailera Therapeutics",
+    version: "v1.0.0",
     ipoStatus: "Recent IPO (April 2026)",
     recommendation: "STRONG BUY",
     recClass: "rec-strong-buy",
@@ -28,9 +32,22 @@ const biotechCompanies = [
     underwriters: ["Bain Capital", "Jefferies", "Morgan Stanley", "Leerink Partners"],
     clinicalSummary: "Evaluates once-weekly injectable dual GLP-1/GIP agonist in global Phase 3 KaiNETIC trials (KaiNETIC-1 NCT07284875, KaiNETIC-2 NCT07284901, KaiNETIC-3 NCT07284979 vs Wegovy). KAI-7535 oral GLP-1 Phase 3 positive top-line reported in July 2026 (HARBOR-1 & OUTSTAND-2).",
     financialSummary: "Fortress balance sheet following $600M Series B and $625M IPO raise ($1.22B cash). Cash runway through mid-2028 completely de-risks capital needs past Phase 3 readouts.",
-    riskFactors: [
-      "Heavy incumbent market competition (Eli Lilly's Mounjaro/Zepbound, Novo Nordisk's Wegovy).",
-      "Large-scale commercial peptide & small molecule manufacturing expansion required."
+    trials: [
+      { name: "KaiNETIC-1", nct: "NCT07284875", phase: "Phase 3", pop: "Obesity/Overweight w/ Comorbidities", endpoint: "Body weight reduction % at 68 wks" },
+      { name: "KaiNETIC-2", nct: "NCT07284901", phase: "Phase 3", pop: "Obesity + Type 2 Diabetes", endpoint: "HbA1c & Weight Loss %" },
+      { name: "KaiNETIC-3", nct: "NCT07284979", phase: "Phase 3", pop: "Severe Obesity (BMI >= 35)", endpoint: "Head-to-head vs Wegovy (Semaglutide)" },
+      { name: "HARBOR-1", nct: "China Registration", phase: "Phase 3", pop: "Oral KAI-7535 Small Molecule", endpoint: "Met primary weight loss endpoints (July 2026)" }
+    ],
+    bullCase: [
+      "Fortress $1.22B balance sheet provides 56 months of runway into mid-2028, eliminating secondary equity dilution risks.",
+      "Dual GLP-1/GIP agonist (Ribupatide) demonstrates competitive weight-loss efficacy matching Eli Lilly's Zepbound and Novo Nordisk's Wegovy.",
+      "Oral KAI-7535 small molecule GLP-1 offers a massive compliance and convenience moat over weekly injections in a $100B+ TAM.",
+      "Backed by elite tier-1 healthcare syndicate (Bain Capital Life Sciences, Atlas Venture, RTW Investments)."
+    ],
+    bearCase: [
+      "Intense market concentration and price wars driven by incumbents Eli Lilly (tirzepatide) and Novo Nordisk (semaglutide/CagriSema).",
+      "Requires establishing large-scale commercial peptide and small-molecule supply chain infrastructure prior to launch.",
+      "Binary risk associated with Western Phase 2/3 trial readouts for oral KAI-7535 in 2027."
     ],
     thesis: "Kailera provides an institutional-grade, de-risked Phase 3 entry into the cardiometabolic megatrend backed by a $1.22B cash buffer and top-tier healthcare VC syndicate.",
     mediaSentiment: {
@@ -50,6 +67,7 @@ const biotechCompanies = [
     id: "bcax",
     ticker: "BCAX",
     name: "Bicara Therapeutics",
+    version: "v1.0.0",
     ipoStatus: "Recent IPO (Sept 2024)",
     recommendation: "SPECULATIVE BUY",
     recClass: "rec-spec-buy",
@@ -68,9 +86,20 @@ const biotechCompanies = [
     underwriters: ["Morgan Stanley", "Leerink Partners", "Piper Sandler", "BofA Securities"],
     clinicalSummary: "First-in-class bifunctional antibody combining EGFR mAb with TGF-β trap. Global pivotal FORTIFI-HN01 Phase 2/3 trial (NCT06788990, n=650) evaluating 1500mg dose + Keytruda. Phase 1b 3-year OS data exceeded 23 months vs 12.3 mo historical Keytruda benchmark.",
     financialSummary: "$539.8M in cash reserves as of Q1 2026 provides runway into 1H 2029 through pivotal mid-2027 interim trial readouts.",
-    riskFactors: [
-      "Single-asset clinical concentration risk tied to FORTIFI-HN01 outcome.",
-      "Complex bispecific antibody manufacturing yield optimization."
+    trials: [
+      { name: "FORTIFI-HN01 Phase 2", nct: "NCT06788990", phase: "Phase 2", pop: "1L HPV-neg R/M HNSCC (Dose selection)", endpoint: "ORR & OBD evaluation (1500mg vs 750mg)" },
+      { name: "FORTIFI-HN01 Phase 3", nct: "NCT06788990", phase: "Phase 3", pop: "1L HPV-neg R/M HNSCC (n=650)", endpoint: "Overall Survival (OS) & PFS vs Keytruda + Placebo" }
+    ],
+    bullCase: [
+      "FDA Breakthrough Therapy designation for 1L HPV-negative Head and Neck cancer.",
+      "Phase 1b 3-year survival data showed median OS > 23 months—nearly doubling Keytruda's historical benchmark (12.3 months).",
+      "$539.8M balance sheet secures cash runway through 1H 2029, fully funding the mid-2027 pivotal trial interim analysis.",
+      "Prime acquisition candidate for major oncology pharma seeking to extend Keytruda combination dominance."
+    ],
+    bearCase: [
+      "Single-asset concentration risk tied strictly to FORTIFI-HN01 clinical trial readouts.",
+      "Manufacturing complexity of dual EGFR x TGF-β bispecific antibody trap.",
+      "Insider 10b5-1 stock sales creating short-term sentiment noise."
     ],
     thesis: "FDA Breakthrough Therapy designation and compelling synergy with Keytruda position ficerafusp alfa as a leading candidate for major pharma acquisition.",
     mediaSentiment: {
@@ -90,6 +119,7 @@ const biotechCompanies = [
     id: "cgon",
     ticker: "CGON",
     name: "CG Oncology",
+    version: "v1.0.0",
     ipoStatus: "Recent IPO (Jan 2024)",
     recommendation: "HOLD / NEUTRAL",
     recClass: "rec-hold",
@@ -108,9 +138,20 @@ const biotechCompanies = [
     underwriters: ["Morgan Stanley", "Goldman Sachs", "Cantor Fitzgerald"],
     clinicalSummary: "Pivotal Phase 3 BOND-003 (NCT04452591) published in The Lancet Oncology (July 2026) demonstrated a 75.5% Complete Response (CR) rate, median DOR of 27.9+ months, and 81% 24-month bladder preservation. Rolling BLA submission completing in Q4 2026.",
     financialSummary: "$1.076 Billion in cash and marketable securities as of Q1 2026 with zero debt, funding operations through 2029. Stock up >300% from $19 IPO.",
-    riskFactors: [
-      "Current valuation ($6.4B) fully prices in BLA approval and near-term commercial execution.",
-      "Requires establishing specialized intravesical delivery commercial infrastructure."
+    trials: [
+      { name: "BOND-003 Cohort C", nct: "NCT04452591", phase: "Phase 3", pop: "High-Risk BCG-Unresponsive NMIBC", endpoint: "75.5% CR rate, 81% 24-mo bladder preservation (Lancet July 2026)" },
+      { name: "PIVOT-006", nct: "NCT06114940", phase: "Phase 3", pop: "Intermediate-Risk NMIBC Adjuvant", endpoint: "Recurrence-Free Survival (Topline 1H 2026)" }
+    ],
+    bullCase: [
+      "Best-in-class efficacy published in The Lancet Oncology (75.5% Complete Response, 81% 24-mo bladder preservation).",
+      "Zero Grade 3/4 drug-related toxicities; avoids morbid radical cystectomy (bladder removal).",
+      "$1.076 Billion cash balance with zero debt funding commercial launch through 2029.",
+      "FDA rolling BLA filing on track for Q4 2026 completion under Fast Track and Breakthrough status."
+    ],
+    bearCase: [
+      "Valuation expanded over 300% ($19 IPO to $6.4B market cap), pricing in near-term BLA approval.",
+      "Commercial execution risk building out specialized intravesical delivery salesforce.",
+      "Limited near-term multiple expansion without approval in broader intermediate-risk NMIBC."
     ],
     thesis: "World-class clinical data and Fast Track/Breakthrough status, but market price reflects full valuation. Recommend accumulating on pullbacks.",
     mediaSentiment: {
@@ -130,6 +171,7 @@ const biotechCompanies = [
     id: "sctx",
     ticker: "SCTX",
     name: "Scribe Therapeutics",
+    version: "v1.0.0",
     ipoStatus: "Recent IPO (July 2026)",
     recommendation: "SPECULATIVE BUY",
     recClass: "rec-spec-buy",
@@ -148,9 +190,20 @@ const biotechCompanies = [
     underwriters: ["BofA Securities", "Evercore ISI", "Stifel"],
     clinicalSummary: "Co-founded by Nobel Laureate Jennifer Doudna. STX-1150 targets PCSK9 for LDL-C lowering via epigenetic silencing without double-stranded DNA cuts. Australia Phase 1 trial active (data 1H 2027). Pipeline includes STX-1200 (LPA) and STX-1400 (APOC3).",
     financialSummary: "$240M post-IPO cash balance bolstered by strategic equity investment from Sanofi and $1.5B+ milestone collaboration with Eli Lilly. Runway into early 2029.",
-    riskFactors: [
-      "In vivo CRISPR off-target editing safety validation.",
-      "Early clinical stage development horizon."
+    trials: [
+      { name: "STX-1150 Phase 1", nct: "First-in-Human Australia", phase: "Phase 1", pop: "Hypercholesterolemia (PCSK9)", endpoint: "LDL-C reduction & safety (1H 2027 data)" },
+      { name: "STX-1200", nct: "Preclinical", phase: "Preclinical", pop: "Elevated Lp(a)", endpoint: "LPA epigenetic silencing" }
+    ],
+    bullCase: [
+      "Nobel Laureate Dr. Jennifer Doudna pedigree and custom CasX 'XE' enzyme platform.",
+      "Epigenetic silencing avoids permanent double-stranded DNA cuts, mitigating off-target genomic risks.",
+      "Strategic alliances with Eli Lilly ($1.5B+ milestones) and Sanofi (direct IPO private placement equity investor).",
+      "$240M cash reserves secure operations into early 2029 across 3 cardiometabolic programs."
+    ],
+    bearCase: [
+      "Early clinical-stage asset profile (Phase 1 first-in-human data pending in 1H 2027).",
+      "Delivery optimization challenges inherent in in vivo LNP tissue targeting.",
+      "Competition from established RNAi therapies (e.g., Novartis' Leqvio)."
     ],
     thesis: "Reopened the gene-editing IPO market with elite scientific pedigree, validated by tier-1 pharma alliances.",
     mediaSentiment: {
@@ -170,6 +223,7 @@ const biotechCompanies = [
     id: "mane",
     ticker: "MANE",
     name: "Veradermics",
+    version: "v1.0.0",
     ipoStatus: "Recent IPO (2026)",
     recommendation: "SPECULATIVE BUY",
     recClass: "rec-spec-buy",
@@ -188,9 +242,20 @@ const biotechCompanies = [
     underwriters: ["Jefferies", "Guggenheim", "BTIG"],
     clinicalSummary: "Proprietary extended-release oral minoxidil tablet optimizing target area hair count while eliminating cardiac hypotension risks. Phase 2/3 Study '302' (NCT06724614, n>500) reported positive top-line data April 2026 (p<0.001). Study '304' (NCT06972264) readout expected 2H 2026.",
     financialSummary: "$766.8M aggregate gross proceeds raised via 2026 IPO, follow-on offering, and private placement. Cash runway extends into 2030.",
-    riskFactors: [
-      "Competition from generic off-label minoxidil compounders and telehealth platforms.",
-      "Consumer cash-pay market adoption sensitivity."
+    trials: [
+      { name: "Study 302", nct: "NCT06724614", phase: "Phase 2/3", pop: "Male Alopecia (n>500)", endpoint: "Target area hair count (p<0.001, April 2026)" },
+      { name: "Study 304", nct: "NCT06972264", phase: "Phase 3", pop: "Male Registration Trial", endpoint: "2H 2026 Topline Data Readout" },
+      { name: "Study 306", nct: "NCT07146022", phase: "Phase 2/3", pop: "Female Alopecia", endpoint: "Active & Recruiting" }
+    ],
+    bullCase: [
+      "Solves major compliance issue in out-of-pocket cash-pay aesthetic market ($8.5B TAM).",
+      "Proprietary extended-release formulation eliminates systemic hypotension cardiovascular risks.",
+      "$766.8M gross capital raised extends cash runway into 2030, fully funding launch.",
+      "Clear FDA Phase 3 registration pathway with positive Study '302' male data."
+    ],
+    bearCase: [
+      "Competition from cheap generic off-label minoxidil compounders and telehealth subscriptions.",
+      "Consumer cash-pay price sensitivity during macroeconomic downturns."
     ],
     thesis: "Solves a major compliance problem in a multi-billion consumer cash-pay market with a fast-track Phase 3 registration pathway.",
     mediaSentiment: {
@@ -210,6 +275,7 @@ const biotechCompanies = [
     id: "apni",
     ticker: "APMD",
     name: "Apnimed",
+    version: "v1.0.0",
     ipoStatus: "Recent IPO (July 31, 2026)",
     recommendation: "STRONG WATCH",
     recClass: "rec-watch",
@@ -228,9 +294,19 @@ const biotechCompanies = [
     underwriters: ["Barclays", "RBC Capital", "Needham"],
     clinicalSummary: "First-in-class once-daily oral combination of aroxybutynin + atomoxetine activating upper airway muscles during sleep. Phase 3 LunAIRo (NCT05811247, n=660) showed 46.8% AHI reduction vs 6.8% placebo (p<0.001). FDA NDA accepted July 2026; PDUFA date February 28, 2027.",
     financialSummary: "Priced upsized IPO on July 30, 2026 at $16.00/share ($192M gross raise). $228.8M total capital buffer funds FDA approval and commercial launch into 2028.",
-    riskFactors: [
-      "Regulatory approval hurdles for novel oral combination mechanism in sleep medicine.",
-      "CPAP market incumbent resistance."
+    trials: [
+      { name: "LunAIRo", nct: "NCT05811247", phase: "Phase 3", pop: "Sleep Apnea (n=660)", endpoint: "46.8% AHI reduction vs 6.8% placebo (p<0.001)" },
+      { name: "SynAIRgy", nct: "NCT05813275", phase: "Phase 3", pop: "Sleep Apnea Combination", endpoint: "Met primary hypoxic burden endpoints" }
+    ],
+    bullCase: [
+      "First viable oral pharmacological alternative to uncomfortable CPAP hardware in a $12B market.",
+      "Over 80% of diagnosed OSA patients discontinue CPAP machines within 1 year, driving massive TAM conversion.",
+      "Pivotal LunAIRo trial demonstrated 46.8% reduction in Apnea-Hypopnea Index (AHI) (p<0.001).",
+      "FDA NDA accepted with assigned PDUFA target date of February 28, 2027."
+    ],
+    bearCase: [
+      "Regulatory approval risk for novel dual-mechanism combination pill in sleep medicine.",
+      "CPAP device manufacturer incumbent commercial resistance."
     ],
     thesis: "First viable oral pharmacological alternative to uncomfortable CPAP machines in a $12B market with 80%+ CPAP non-compliance rates.",
     mediaSentiment: {
@@ -291,6 +367,7 @@ const agentSpecs = [
 // DOM Load Event
 document.addEventListener("DOMContentLoaded", () => {
   renderCards(biotechCompanies);
+  renderDeepDiveTab(biotechCompanies);
   renderMediaTab(biotechCompanies);
   renderMatrixTable(biotechCompanies);
   renderAgentCards(agentSpecs);
@@ -323,7 +400,7 @@ function renderCards(data) {
             <i class="fa-solid ${co.recIcon}"></i> ${co.recommendation}
           </span>
         </div>
-        <h3 class="company-title">${co.name}</h3>
+        <h3 class="company-title">${co.name} <span class="version-tag">${co.version}</span></h3>
         <p class="company-status"><i class="fa-regular fa-calendar-check"></i> ${co.ipoStatus}</p>
 
         <div class="metrics-row">
@@ -353,8 +430,107 @@ function renderCards(data) {
           Agent Score: <span class="score-val">${co.score}/100</span>
         </div>
         <button class="btn-detail" onclick="openCompanyModal('${co.id}')">
-          Deep Dive <i class="fa-solid fa-chevron-right"></i>
+          Bull & Bear Cases <i class="fa-solid fa-chevron-right"></i>
         </button>
+      </div>
+    </div>
+  `).join("");
+}
+
+// Render Granular Deep Dive & Bull/Bear Cases Tab
+function renderDeepDiveTab(data) {
+  const container = document.getElementById("deepdive-container");
+  if (!container) return;
+
+  container.innerHTML = data.map(co => `
+    <div class="deepdive-card" id="deepdive-${co.id}">
+      <div class="deepdive-card-header">
+        <div>
+          <span class="ticker-badge" style="font-size:1rem;">${co.ticker}</span>
+          <h3 style="font-size:1.6rem; font-weight:800; display:inline; margin-left:0.5rem;">${co.name}</h3>
+          <span class="version-tag">${co.version}</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <span class="rec-badge ${co.recClass}">
+            <i class="fa-solid ${co.recIcon}"></i> ${co.recommendation}
+          </span>
+          <span style="font-weight:800; color:var(--accent-teal); font-size:1.1rem;">Score: ${co.score}/100</span>
+        </div>
+      </div>
+
+      <!-- Financial & Asset Headline Grid -->
+      <div class="metrics-row" style="margin-bottom:1.5rem;">
+        <div class="metric-item">
+          <span class="metric-val">${co.marketCap}</span>
+          <span class="metric-lbl">Market Cap</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-val">${co.enterpriseValue}</span>
+          <span class="metric-lbl">Enterprise Value</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-val">${co.cashBalance}</span>
+          <span class="metric-lbl">Cash Reserves</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-val" style="color:var(--accent-teal);">${co.cashRunway}</span>
+          <span class="metric-lbl">Implied Runway</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-val">${co.grossRaise}</span>
+          <span class="metric-lbl">Gross Raise</span>
+        </div>
+      </div>
+
+      <!-- Bull vs Bear Cases Grid -->
+      <div class="cases-grid">
+        <div class="bull-case-box">
+          <div class="bull-case-title"><i class="fa-solid fa-arrow-trend-up"></i> 🟢 The Bull Case (Upside Drivers)</div>
+          <ul class="case-list">
+            ${co.bullCase.map(b => `<li>${b}</li>`).join("")}
+          </ul>
+        </div>
+
+        <div class="bear-case-box">
+          <div class="bear-case-title"><i class="fa-solid fa-arrow-trend-down"></i> 🔴 The Bear Case (Operational Risks)</div>
+          <ul class="case-list">
+            ${co.bearCase.map(b => `<li>${b}</li>`).join("")}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Granular Clinical Trial Identifiers Table -->
+      <div style="margin:1.5rem 0;">
+        <h4 style="color:var(--accent-cyan); font-weight:700; margin-bottom:0.5rem;"><i class="fa-solid fa-vial"></i> Granular Clinical Trial Registration Data:</h4>
+        <div class="table-container">
+          <table class="trial-table">
+            <thead>
+              <tr>
+                <th>Trial Name</th>
+                <th>NCT Identifier</th>
+                <th>Phase</th>
+                <th>Patient Population</th>
+                <th>Primary Endpoint / Efficacy Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${co.trials.map(t => `
+                <tr>
+                  <td><strong>${t.name}</strong></td>
+                  <td><code style="color:var(--accent-cyan);">${t.nct}</code></td>
+                  <td><span class="ticker-badge" style="font-size:0.75rem;">${t.phase}</span></td>
+                  <td>${t.pop}</td>
+                  <td>${t.endpoint}</td>
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Executive Investment Thesis -->
+      <div style="background:rgba(56, 189, 248, 0.08); border-left:4px solid var(--accent-cyan); padding:1rem; border-radius:0 var(--radius-sm) var(--radius-sm) 0; font-size:0.925rem; color:var(--text-main);">
+        <strong>Institutional Investment Thesis:</strong> ${co.thesis}
       </div>
     </div>
   `).join("");
@@ -374,7 +550,7 @@ function renderMediaTab(data) {
             Media Score: <strong>${co.mediaScore}/100</strong>
           </span>
         </div>
-        <h3 class="company-title">${co.name}</h3>
+        <h3 class="company-title">${co.name} <span class="version-tag">${co.version}</span></h3>
         <p class="company-status" style="color:var(--accent-teal); font-weight:600;">
           <i class="fa-solid fa-bullhorn"></i> ${co.mediaSentiment.rating}
         </p>
@@ -414,7 +590,7 @@ function renderMatrixTable(data) {
   tbody.innerHTML = data.map(co => `
     <tr>
       <td>
-        <strong>${co.name}</strong>
+        <strong>${co.name}</strong> <span class="version-tag" style="font-size:0.65rem;">${co.version}</span>
         <br><span class="ticker-badge" style="font-size:0.75rem;">${co.ticker}</span>
       </td>
       <td><span style="font-size:0.8rem; color:var(--text-muted);">${co.ipoStatus}</span></td>
@@ -523,7 +699,7 @@ function setupModal() {
   });
 }
 
-// Open Company Modal with Dynamic Agent Synthesis Content
+// Open Company Modal with Dynamic Agent Synthesis Content & Bull/Bear Cases
 function openCompanyModal(companyId) {
   const co = biotechCompanies.find(c => c.id === companyId);
   if (!co) return;
@@ -538,6 +714,7 @@ function openCompanyModal(companyId) {
         <div>
           <span class="ticker-badge" style="font-size:1.1rem; padding:0.3rem 0.8rem;">${co.ticker}</span>
           <h2 style="font-size:1.8rem; font-weight:800; display:inline; margin-left:0.5rem;">${co.name}</h2>
+          <span class="version-tag">${co.version}</span>
         </div>
         <span class="rec-badge ${co.recClass}" style="font-size:0.9rem; padding:0.4rem 1rem;">
           <i class="fa-solid ${co.recIcon}"></i> ${co.recommendation}
@@ -576,7 +753,50 @@ function openCompanyModal(companyId) {
         </div>
       </div>
 
-      <div class="modal-sec-title"><i class="fa-solid fa-newspaper"></i> Agent 6: Media, Twitter/X & Reddit Sentiment Audit</div>
+      <!-- Bull vs Bear Cases in Modal -->
+      <div class="cases-grid">
+        <div class="bull-case-box">
+          <div class="bull-case-title"><i class="fa-solid fa-arrow-trend-up"></i> 🟢 The Bull Case</div>
+          <ul class="case-list">
+            ${co.bullCase.map(b => `<li>${b}</li>`).join("")}
+          </ul>
+        </div>
+
+        <div class="bear-case-box">
+          <div class="bear-case-title"><i class="fa-solid fa-arrow-trend-down"></i> 🔴 The Bear Case</div>
+          <ul class="case-list">
+            ${co.bearCase.map(b => `<li>${b}</li>`).join("")}
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal-sec-title"><i class="fa-solid fa-vial"></i> Clinical Trial Registrations (NCT Identifiers)</div>
+      <div class="table-container" style="margin-bottom:1rem;">
+        <table class="trial-table">
+          <thead>
+            <tr>
+              <th>Trial</th>
+              <th>NCT ID</th>
+              <th>Phase</th>
+              <th>Population</th>
+              <th>Primary Endpoint / Efficacy</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${co.trials.map(t => `
+              <tr>
+                <td><strong>${t.name}</strong></td>
+                <td><code style="color:var(--accent-cyan);">${t.nct}</code></td>
+                <td><span class="ticker-badge" style="font-size:0.7rem;">${t.phase}</span></td>
+                <td>${t.pop}</td>
+                <td>${t.endpoint}</td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="modal-sec-title"><i class="fa-solid fa-newspaper"></i> Agent 6: Media & Social Sentiment Audit</div>
       <div style="background:rgba(139, 92, 246, 0.08); border-left:4px solid var(--accent-purple); padding:0.85rem; border-radius:0 var(--radius-sm) var(--radius-sm) 0; font-size:0.9rem; margin-bottom:1rem;">
         <p style="margin-bottom:0.4rem;"><strong>Overall Sentiment Rating:</strong> <span style="color:var(--accent-purple); font-weight:700;">${co.mediaSentiment.rating}</span></p>
         <p style="margin-bottom:0.4rem;"><strong>Press Highlights:</strong> ${co.mediaSentiment.pressHighlight}</p>
@@ -592,25 +812,7 @@ function openCompanyModal(companyId) {
         </div>
       </div>
 
-      <div class="modal-sec-title"><i class="fa-solid fa-flask"></i> Clinical & Scientific Evaluation</div>
-      <p style="font-size:0.925rem; color:var(--text-main); margin-bottom:0.5rem;">
-        <strong>Lead Candidate:</strong> ${co.leadCandidate} (${co.clinicalPhase})
-      </p>
-      <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1rem;">
-        ${co.clinicalSummary}
-      </p>
-
-      <div class="modal-sec-title"><i class="fa-solid fa-coins"></i> Financial Health & Runway Buffer</div>
-      <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1rem;">
-        ${co.financialSummary}
-      </p>
-
-      <div class="modal-sec-title"><i class="fa-solid fa-triangle-exclamation"></i> Risk Matrix & Market Bottlenecks</div>
-      <ul style="padding-left:1.25rem; color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem;">
-        ${co.riskFactors.map(r => `<li style="margin-bottom:0.3rem;">${r}</li>`).join("")}
-      </ul>
-
-      <div class="modal-sec-title"><i class="fa-solid fa-lightbulb"></i> Investment Thesis</div>
+      <div class="modal-sec-title"><i class="fa-solid fa-lightbulb"></i> Institutional Investment Thesis</div>
       <div style="background:rgba(56, 189, 248, 0.08); border-left:4px solid var(--accent-cyan); padding:1rem; border-radius:0 var(--radius-sm) var(--radius-sm) 0; font-size:0.925rem; color:var(--text-main);">
         ${co.thesis}
       </div>

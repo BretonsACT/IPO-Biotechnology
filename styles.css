@@ -1,5 +1,6 @@
 /* ==========================================================================
    Biotech IPO Intelligence Suite - Modern Institutional Theme (Dark Glass)
+   Version: 1.0.0
    ========================================================================== */
 
 :root {
@@ -49,6 +50,26 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
+}
+
+/* Version Badge */
+.version-tag {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: var(--accent-cyan);
+  display: inline-block;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+.badge-v {
+  font-family: var(--font-mono);
+  color: var(--accent-teal);
+  font-weight: 700;
 }
 
 /* Background Glow Orbs */
@@ -525,6 +546,100 @@ body {
   box-shadow: var(--glow-cyan);
 }
 
+/* Deep Dive & Bull/Bear Cases Layout */
+.deepdive-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.deepdive-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+.deepdive-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+.cases-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.25rem 0;
+}
+@media (max-width: 850px) {
+  .cases-grid { grid-template-columns: 1fr; }
+}
+
+.bull-case-box {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+.bull-case-title {
+  color: #34d399;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.bear-case-box {
+  background: rgba(244, 63, 94, 0.08);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+.bear-case-title {
+  color: #fb7185;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.case-list {
+  padding-left: 1.25rem;
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+.case-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Clinical Trial Endpoints Table inside Deep Dive */
+.trial-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
+.trial-table th {
+  background: rgba(9, 13, 22, 0.8);
+  color: var(--accent-cyan);
+  padding: 0.6rem 0.85rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-glass);
+}
+.trial-table td {
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid var(--border-glass);
+  color: var(--text-muted);
+}
+
 /* Section Header */
 .section-header {
   margin-bottom: 1.75rem;
@@ -710,6 +825,7 @@ body {
 .footer-right {
   display: flex;
   gap: 1.25rem;
+  flex-wrap: wrap;
 }
 .footer-link {
   color: var(--text-muted);
