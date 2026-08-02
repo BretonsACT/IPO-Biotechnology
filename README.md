@@ -1,8 +1,8 @@
-# 🧬 IPO Biotechnology Intelligence & Multi-Agent Equity Research Suite `v1.0.0`
+# 🧬 IPO Biotechnology Intelligence & Multi-Agent Equity Research Suite `v1.1.0`
 
-[![System Version](https://img.shields.io/badge/version-1.0.0-38bdf8.svg)](README.md)
+[![System Version](https://img.shields.io/badge/version-1.1.0-38bdf8.svg)](README.md)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Institutional Deep Dive v1.0.0](https://img.shields.io/badge/Institutional%20Deep%20Dive-v1.0.0-0d9488.svg)](reports/INSTITUTIONAL_BIOTECH_DEEP_DIVE_2026.md)
+[![Institutional Deep Dive v1.1.0](https://img.shields.io/badge/Institutional%20Deep%20Dive-v1.1.0-0d9488.svg)](reports/INSTITUTIONAL_BIOTECH_DEEP_DIVE_2026.md)
 [![Media Sentiment Audit v1.0.0](https://img.shields.io/badge/Media%20%26%20Social-Sentiment%20v1.0.0-8b5cf6.svg)](reports/MEDIA_SENTIMENT_REPORT_2026.md)
 [![Multi-Agent System](https://img.shields.io/badge/Architecture-6--Agent%20Suite-10b981.svg)](agents/)
 

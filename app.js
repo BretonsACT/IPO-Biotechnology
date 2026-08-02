@@ -5,7 +5,7 @@
  * Features: Granular Company Subnav Dossiers, Bull vs Bear Cases, Sources & Citations
  */
 
-const APP_VERSION = "1.0.0";
+const APP_VERSION = "1.1.0";
 
 // Dataset of Analyzed Biotechnology IPO Companies (2024-2026)
 const biotechCompanies = [
@@ -13,7 +13,7 @@ const biotechCompanies = [
     id: "klra",
     ticker: "KLRA",
     name: "Kailera Therapeutics",
-    version: "v1.0.0",
+    version: "v1.1.0",
     headquarters: "Waltham, Massachusetts, USA",
     ceo: "Ron Renaud",
     cmo: "Scott Wasserman, M.D.",
@@ -76,7 +76,7 @@ const biotechCompanies = [
     id: "bcax",
     ticker: "BCAX",
     name: "Bicara Therapeutics",
-    version: "v1.0.0",
+    version: "v1.1.0",
     headquarters: "Boston, Massachusetts, USA",
     ceo: "Claire Mazumdar, Ph.D., MBA",
     cmo: "David Raben, M.D., Ph.D.",
@@ -137,7 +137,7 @@ const biotechCompanies = [
     id: "cgon",
     ticker: "CGON",
     name: "CG Oncology",
-    version: "v1.0.0",
+    version: "v1.1.0",
     headquarters: "Dallas, Texas & Irvine, California, USA",
     ceo: "Arthur Kuan",
     cmo: "Dr. Vijay Kasturi",
@@ -198,7 +198,7 @@ const biotechCompanies = [
     id: "sctx",
     ticker: "SCTX",
     name: "Scribe Therapeutics",
-    version: "v1.0.0",
+    version: "v1.1.0",
     headquarters: "San Francisco Bay Area, California, USA",
     ceo: "Benjamin Oakes, Ph.D. (Co-Founder Dr. Jennifer Doudna)",
     cmo: "Clinical Steering Board",
@@ -259,7 +259,7 @@ const biotechCompanies = [
     id: "mane",
     ticker: "MANE",
     name: "Veradermics",
-    version: "v1.0.0",
+    version: "v1.1.0",
     headquarters: "California, USA",
     ceo: "Executive Medical Board",
     cmo: "Clinical Dermatology Directorate",
@@ -320,7 +320,7 @@ const biotechCompanies = [
     id: "apni",
     ticker: "APMD",
     name: "Apnimed",
-    version: "v1.0.0",
+    version: "v1.1.0",
     headquarters: "Cambridge, Massachusetts, USA",
     ceo: "Larry Miller, M.D.",
     cmo: "Ron Kramer, M.D.",
