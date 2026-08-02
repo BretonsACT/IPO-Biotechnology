@@ -1,9 +1,9 @@
 # Agent 1: IPO Scanner & Discovery Agent (`ipo_scanner_agent`)
 
-> **LLM Engine**: `Claude Opus 4.6 (pro)` — High-Precision Financial Data Extraction & Regulatory Audit
+> **LLM Engine**: `Gemini 3.6 Flash` — Ultra-Fast Ingestion of Large SEC Filings & IPO Calendars
 
 ## 🎯 Role Overview
-The **IPO Scanner & Discovery Agent** is the primary intake module of the Biotech Investment Intelligence Pipeline. Executing on **Claude Opus 4.6**, it continuously monitors regulatory filings, SEC Form S-1/S-1A submissions, preliminary prospectuses, and IPO calendars to identify upcoming and recent biotechnology initial public offerings (2024–2026).
+The **IPO Scanner & Discovery Agent** is the primary intake module of the Biotech Investment Intelligence Pipeline. Executing on **Gemini 3.6 Flash**, it leverages massive context windows (1M+ tokens) and rapid throughput to continuously monitor regulatory filings, SEC Form S-1/S-1A submissions, preliminary prospectuses, and IPO calendars for upcoming and recent biotechnology initial public offerings (2024–2026).
 
 ---
 
@@ -23,19 +23,13 @@ The **IPO Scanner & Discovery Agent** is the primary intake module of the Biotec
 
 ```mermaid
 graph TD
-    A[SEC EDGAR / IPO Filings] --> B[IPO Scanner Agent - Claude Opus 4.6]
+    A[SEC EDGAR / IPO Filings] --> B[IPO Scanner Agent - Gemini 3.6 Flash]
     B --> C{Filter Criteria Met?}
     C -- Yes --> D[Extract Offering Terms & Capital Raised]
     C -- No --> E[Discard non-biotech/micro-cap]
     D --> F[Generate Structured IPO Dossier]
     F --> G[Dispatch to Pipeline & Financial Agents]
 ```
-
-### Filtering Criteria:
-- **Sector**: Human Therapeutics, Gene Editing, Radiopharmaceuticals, Oncology, Immunology, Metabolic Diseases.
-- **Minimum Raise**: $\ge \$50\text{ Million}$ (excludes penny-stock shell IPOs).
-- **Listing Exchange**: NASDAQ Global Select / Global Market, NYSE.
-- **LLM Reasoning**: Claude Opus 4.6 for cross-referencing S-1 prospectus amendments and syndicate agreements.
 
 ---
 
@@ -45,7 +39,7 @@ graph TD
 {
   "ticker": "KLRA",
   "company_name": "Kailera Therapeutics",
-  "model_engine": "Claude Opus 4.6",
+  "model_engine": "Gemini 3.6 Flash",
   "exchange": "NASDAQ",
   "ipo_date": "2026-04-17",
   "offer_price": 16.00,

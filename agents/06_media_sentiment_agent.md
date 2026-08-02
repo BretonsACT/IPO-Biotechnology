@@ -1,9 +1,9 @@
 # Agent 6: Media, Social & Sentiment Monitor Agent (`media_sentiment_agent`)
 
-> **LLM Engine**: `Claude Opus 4.6 (pro)` — Mainstream Press Audit & Social Sentiment Aggregation
+> **LLM Engine**: `Gemini 3.6 Flash` — Real-Time High-Frequency Web Search & Sentiment Scanning
 
 ## 🎯 Role Overview
-The **Media, Social & Sentiment Monitor Agent** utilizes **Claude Opus 4.6** to perform continuous media audits across mainstream healthcare press (*The Lancet Oncology*, *BioSpace*, *Fierce Biotech*, *Endpoints News*, *Business Wire*), Twitter/X cashtag activity (`$KLRA`, `$BCAX`, `$CGON`, `$SCTX`, `$MANE`, `$APMD`), and investor subreddits (`r/biotech`, `r/stocks`, `r/StockTitan`, `r/tressless`).
+The **Media, Social & Sentiment Monitor Agent** utilizes **Gemini 3.6 Flash** to perform high-speed, continuous media audits across mainstream healthcare press (*The Lancet Oncology*, *BioSpace*, *Fierce Biotech*, *Endpoints News*, *Business Wire*), Twitter/X cashtag activity (`$KLRA`, `$BCAX`, `$CGON`, `$SCTX`, `$MANE`, `$APMD`), and investor subreddits (`r/biotech`, `r/stocks`, `r/StockTitan`, `r/tressless`).
 
 ---
 
