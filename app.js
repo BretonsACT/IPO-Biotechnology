@@ -1,7 +1,7 @@
 /**
  * Biotech IPO Intelligence Suite - Client Script
  * Multi-Agent Biotechnology Investment Research & Analytics
- * Enhanced with Dedicated Media & Sentiment Tab & External Media Links
+ * Enhanced with Deep Clinical Research, Granular NCT Identifiers & Cash Runway Projections
  */
 
 // Dataset of Analyzed Biotechnology IPO Companies (2024-2026)
@@ -19,20 +19,20 @@ const biotechCompanies = [
     marketCap: "$2.40B",
     enterpriseValue: "$1.25B",
     cashBalance: "$1.22B",
-    cashRunway: "56 Months",
+    cashRunway: "Mid-2028 (56 Mos)",
     grossRaise: "$625M",
-    leadCandidate: "KAI-9531 (Ribupatide)",
-    clinicalPhase: "Phase 3 (KaiNETIC Trial)",
+    leadCandidate: "Ribupatide (KAI-9531)",
+    clinicalPhase: "Phase 3 (KaiNETIC Program)",
     indication: "Obesity & Overweight (Dual GLP-1/GIP Agonist)",
     tam: "$100B+ Global Obesity",
-    underwriters: ["Bain Capital", "Jefferies", "Morgan Stanley"],
-    clinicalSummary: "Evaluates once-weekly injectable dual GLP-1/GIP agonist in global Phase 3 KaiNETIC trials. Pipeline also includes oral GLP-1 (KAI-7535) and triple agonist (KAI-4729).",
-    financialSummary: "Fortress balance sheet following $600M Series B and $625M IPO raise. Cash runway of 56 months completely de-risks capital needs past Phase 3 readouts.",
+    underwriters: ["Bain Capital", "Jefferies", "Morgan Stanley", "Leerink Partners"],
+    clinicalSummary: "Evaluates once-weekly injectable dual GLP-1/GIP agonist in global Phase 3 KaiNETIC trials (KaiNETIC-1 NCT07284875, KaiNETIC-2 NCT07284901, KaiNETIC-3 NCT07284979 vs Wegovy). KAI-7535 oral GLP-1 Phase 3 positive top-line reported in July 2026 (HARBOR-1 & OUTSTAND-2).",
+    financialSummary: "Fortress balance sheet following $600M Series B and $625M IPO raise ($1.22B cash). Cash runway through mid-2028 completely de-risks capital needs past Phase 3 readouts.",
     riskFactors: [
       "Heavy incumbent market competition (Eli Lilly's Mounjaro/Zepbound, Novo Nordisk's Wegovy).",
-      "Large-scale peptide manufacturing expansion required for commercial scale."
+      "Large-scale commercial peptide & small molecule manufacturing expansion required."
     ],
-    thesis: "Kailera provides an institutional-grade, de-risked Phase 3 entry into the cardiometabolic megatrend backed by a $1.2B+ cash buffer and top-tier healthcare VC syndicate.",
+    thesis: "Kailera provides an institutional-grade, de-risked Phase 3 entry into the cardiometabolic megatrend backed by a $1.22B cash buffer and top-tier healthcare VC syndicate.",
     mediaSentiment: {
       rating: "Strongly Bullish (88% Bullish)",
       pressHighlight: "Featured in BioSpace & Endpoints News as largest 2026 biotech IPO; positive Phase 3 ADA 2026 trial readouts.",
@@ -58,16 +58,16 @@ const biotechCompanies = [
     mediaScore: 74,
     marketCap: "$1.80B",
     enterpriseValue: "$1.32B",
-    cashBalance: "$480M",
-    cashRunway: "32 Months",
+    cashBalance: "$539.8M",
+    cashRunway: "1H 2029 (36+ Mos)",
     grossRaise: "$362M",
-    leadCandidate: "Ficerafusp Alfa",
+    leadCandidate: "Ficerafusp Alfa (BCA101)",
     clinicalPhase: "Phase 2/3 (FORTIFI-HN01)",
     indication: "Head & Neck Cancer (EGFR x TGF-β Bispecific)",
     tam: "$6.5B Head & Neck Oncology",
-    underwriters: ["Morgan Stanley", "Leerink Partners", "Piper Sandler"],
-    clinicalSummary: "First-in-class bifunctional antibody combining EGFR mAb with TGF-β trap. Outstanding 3-year Phase 1b survival data in HPV-negative HNSCC when paired with Keytruda.",
-    financialSummary: "$480M in cash reserves provides over 2.5 years of runway through pivotal mid-2027 interim trial readouts.",
+    underwriters: ["Morgan Stanley", "Leerink Partners", "Piper Sandler", "BofA Securities"],
+    clinicalSummary: "First-in-class bifunctional antibody combining EGFR mAb with TGF-β trap. Global pivotal FORTIFI-HN01 Phase 2/3 trial (NCT06788990, n=650) evaluating 1500mg dose + Keytruda. Phase 1b 3-year OS data exceeded 23 months vs 12.3 mo historical Keytruda benchmark.",
+    financialSummary: "$539.8M in cash reserves as of Q1 2026 provides runway into 1H 2029 through pivotal mid-2027 interim trial readouts.",
     riskFactors: [
       "Single-asset clinical concentration risk tied to FORTIFI-HN01 outcome.",
       "Complex bispecific antibody manufacturing yield optimization."
@@ -98,16 +98,16 @@ const biotechCompanies = [
     mediaScore: 94,
     marketCap: "$6.40B",
     enterpriseValue: "$5.81B",
-    cashBalance: "$590M",
-    cashRunway: "38 Months",
+    cashBalance: "$1.076B",
+    cashRunway: "Through 2029 (40+ Mos)",
     grossRaise: "$380M",
     leadCandidate: "Cretostimogene Grenadenorepvec",
     clinicalPhase: "Phase 3 (BOND-003)",
     indication: "High-Risk NMIBC Bladder Cancer (Oncolytic Immunotherapy)",
     tam: "$4.2B NMIBC Bladder Cancer",
-    underwriters: ["Morgan Stanley", "Goldman Sachs", "Cantor"],
-    clinicalSummary: "Phase 3 BOND-003 published in The Lancet Oncology (July 2026) showed a stellar 75.5% Complete Response (CR) rate with 81% 24-month bladder preservation.",
-    financialSummary: "$590M cash balance with zero debt. Stock has appreciated >300% since its $19 IPO, expanding market cap to $6.4B.",
+    underwriters: ["Morgan Stanley", "Goldman Sachs", "Cantor Fitzgerald"],
+    clinicalSummary: "Pivotal Phase 3 BOND-003 (NCT04452591) published in The Lancet Oncology (July 2026) demonstrated a 75.5% Complete Response (CR) rate, median DOR of 27.9+ months, and 81% 24-month bladder preservation. Rolling BLA submission completing in Q4 2026.",
+    financialSummary: "$1.076 Billion in cash and marketable securities as of Q1 2026 with zero debt, funding operations through 2029. Stock up >300% from $19 IPO.",
     riskFactors: [
       "Current valuation ($6.4B) fully prices in BLA approval and near-term commercial execution.",
       "Requires establishing specialized intravesical delivery commercial infrastructure."
@@ -130,7 +130,7 @@ const biotechCompanies = [
     id: "sctx",
     ticker: "SCTX",
     name: "Scribe Therapeutics",
-    ipoStatus: "Recent IPO (2026)",
+    ipoStatus: "Recent IPO (July 2026)",
     recommendation: "SPECULATIVE BUY",
     recClass: "rec-spec-buy",
     recIcon: "fa-dna",
@@ -139,15 +139,15 @@ const biotechCompanies = [
     marketCap: "$850M",
     enterpriseValue: "$610M",
     cashBalance: "$240M",
-    cashRunway: "28 Months",
-    grossRaise: "$129M",
-    leadCandidate: "STX-101 / Custom CasX Engine",
-    clinicalPhase: "Phase 1/2 Clinical",
-    indication: "Cardiometabolic & Monogenic Diseases (In Vivo Gene Editing)",
+    cashRunway: "Early 2029 (30 Mos)",
+    grossRaise: "$155.51M",
+    leadCandidate: "STX-1150 (CasX Silencing Engine)",
+    clinicalPhase: "Phase 1 First-in-Human",
+    indication: "Cardiometabolic PCSK9 Silencing (In Vivo Gene Editing)",
     tam: "$15B Gene Editing Target",
     underwriters: ["BofA Securities", "Evercore ISI", "Stifel"],
-    clinicalSummary: "Co-founded by Nobel Laureate Jennifer Doudna. Engineering custom CRISPR CasX enzymes for high specificity in vivo liver and tissue target editing.",
-    financialSummary: "$240M cash reserves bolstered by major pharma partnerships with Eli Lilly and Sanofi providing milestone non-dilutive funding.",
+    clinicalSummary: "Co-founded by Nobel Laureate Jennifer Doudna. STX-1150 targets PCSK9 for LDL-C lowering via epigenetic silencing without double-stranded DNA cuts. Australia Phase 1 trial active (data 1H 2027). Pipeline includes STX-1200 (LPA) and STX-1400 (APOC3).",
+    financialSummary: "$240M post-IPO cash balance bolstered by strategic equity investment from Sanofi and $1.5B+ milestone collaboration with Eli Lilly. Runway into early 2029.",
     riskFactors: [
       "In vivo CRISPR off-target editing safety validation.",
       "Early clinical stage development horizon."
@@ -178,16 +178,16 @@ const biotechCompanies = [
     mediaScore: 80,
     marketCap: "$1.10B",
     enterpriseValue: "$790M",
-    cashBalance: "$310M",
-    cashRunway: "36 Months",
-    grossRaise: "$294.8M",
-    leadCandidate: "VD-401 (Oral Minoxidil Micro-dose)",
-    clinicalPhase: "Phase 3 Registration",
+    cashBalance: "$766.8M (Raised)",
+    cashRunway: "Into 2030 (48+ Mos)",
+    grossRaise: "$766.8M",
+    leadCandidate: "VDPHL01 (Oral Minoxidil XR)",
+    clinicalPhase: "Phase 3 Pivotal",
     indication: "Androgenetic Alopecia (Hair Loss)",
     tam: "$8.5B Aesthetic Dermatology",
     underwriters: ["Jefferies", "Guggenheim", "BTIG"],
-    clinicalSummary: "Proprietary oral minoxidil targeted formulation optimizing pharmacokinetics while eliminating systemic hypotension side-effects. Phase 3 ongoing.",
-    financialSummary: "$310M cash balance provides 3 years of runway through Phase 3 readout and NDA filing.",
+    clinicalSummary: "Proprietary extended-release oral minoxidil tablet optimizing target area hair count while eliminating cardiac hypotension risks. Phase 2/3 Study '302' (NCT06724614, n>500) reported positive top-line data April 2026 (p<0.001). Study '304' (NCT06972264) readout expected 2H 2026.",
+    financialSummary: "$766.8M aggregate gross proceeds raised via 2026 IPO, follow-on offering, and private placement. Cash runway extends into 2030.",
     riskFactors: [
       "Competition from generic off-label minoxidil compounders and telehealth platforms.",
       "Consumer cash-pay market adoption sensitivity."
@@ -208,40 +208,40 @@ const biotechCompanies = [
   },
   {
     id: "apni",
-    ticker: "APNI",
+    ticker: "APMD",
     name: "Apnimed",
-    ipoStatus: "Upcoming IPO Candidate (S-1)",
+    ipoStatus: "Recent IPO (July 31, 2026)",
     recommendation: "STRONG WATCH",
     recClass: "rec-watch",
     recIcon: "fa-eye",
     score: 82,
     mediaScore: 86,
-    marketCap: "$750M (Est)",
-    enterpriseValue: "$590M (Est)",
-    cashBalance: "$160M (Target)",
-    cashRunway: "30 Months (Est)",
-    grossRaise: "$160M Target",
-    leadCandidate: "AD109 (Aroxybutynin / Atomoxetine)",
-    clinicalPhase: "Phase 3 (Lunaria & Synapse)",
+    marketCap: "$750M",
+    enterpriseValue: "$590M",
+    cashBalance: "$228.8M",
+    cashRunway: "Into 2028+ (30 Mos)",
+    grossRaise: "$192M ($16/share)",
+    leadCandidate: "AD109 / Oxnimbi",
+    clinicalPhase: "FDA NDA Accepted (PDUFA Feb 2027)",
     indication: "Obstructive Sleep Apnea (Oral Combination Pill)",
     tam: "$12B Sleep Apnea Market",
     underwriters: ["Barclays", "RBC Capital", "Needham"],
-    clinicalSummary: "First-in-class once-daily oral combination therapy designed to activate upper airway muscles during sleep, offering an alternative to CPAP machines.",
-    financialSummary: "Filing S-1 to raise ~$160M in public offering to complete Phase 3 registration trials.",
+    clinicalSummary: "First-in-class once-daily oral combination of aroxybutynin + atomoxetine activating upper airway muscles during sleep. Phase 3 LunAIRo (NCT05811247, n=660) showed 46.8% AHI reduction vs 6.8% placebo (p<0.001). FDA NDA accepted July 2026; PDUFA date February 28, 2027.",
+    financialSummary: "Priced upsized IPO on July 30, 2026 at $16.00/share ($192M gross raise). $228.8M total capital buffer funds FDA approval and commercial launch into 2028.",
     riskFactors: [
       "Regulatory approval hurdles for novel oral combination mechanism in sleep medicine.",
       "CPAP market incumbent resistance."
     ],
     thesis: "First viable oral pharmacological alternative to uncomfortable CPAP machines in a $12B market with 80%+ CPAP non-compliance rates.",
     mediaSentiment: {
-      rating: "Bullish Pre-IPO (84% Bullish)",
-      pressHighlight: "S-1 filing covered across healthcare financial press for disruptor potential in CPAP market.",
+      rating: "Bullish (84% Bullish)",
+      pressHighlight: "S-1 filing covered across healthcare financial press for disruptor potential in CPAP market; FDA NDA accepted July 2026.",
       twitterBuzz: "Sleep medicine researchers highlight high demand for non-CPAP oral therapies.",
       redditBuzz: "Patient advocacy and investor subreddits note 80%+ CPAP discontinuation rate as major TAM driver.",
       links: [
         { label: "Endpoints News S-1 Raise", icon: "fa-newspaper", url: "https://endpoints.news" },
         { label: "BioSpace Phase 3 Study", icon: "fa-solid fa-flask", url: "https://www.biospace.com/search?q=Apnimed" },
-        { label: "Twitter / X ($APNI)", icon: "fa-brands fa-x-twitter", url: "https://x.com/search?q=%24APNI" },
+        { label: "Twitter / X ($APMD)", icon: "fa-brands fa-x-twitter", url: "https://x.com/search?q=%24APMD" },
         { label: "Reddit Sleep Apnea Thread", icon: "fa-brands fa-reddit", url: "https://www.reddit.com/r/stocks/search/?q=Apnimed" }
       ]
     }
@@ -332,7 +332,7 @@ function renderCards(data) {
             <span class="metric-lbl">Market Cap</span>
           </div>
           <div class="metric-item">
-            <span class="metric-val">${co.cashRunway}</span>
+            <span class="metric-val" style="color:var(--accent-teal); font-size:0.85rem;">${co.cashRunway}</span>
             <span class="metric-lbl">Cash Runway</span>
           </div>
           <div class="metric-item">
@@ -563,7 +563,7 @@ function openCompanyModal(companyId) {
           <span class="metric-lbl">Cash Balance</span>
         </div>
         <div class="metric-item">
-          <span class="metric-val" style="color:var(--accent-teal);">${co.cashRunway}</span>
+          <span class="metric-val" style="color:var(--accent-teal); font-size:0.85rem;">${co.cashRunway}</span>
           <span class="metric-lbl">Implied Runway</span>
         </div>
         <div class="metric-item">
