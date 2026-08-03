@@ -1,9 +1,9 @@
 # Agent 4: Risk, Patent & Market Agent (`risk_market_agent`)
 
-> **LLM Engine**: `Gemini 3.6 Flash` — High-Speed Market Epidemiology & Patent Landscape Analysis
+> **LLM Engine**: `Claude Opus 4.6 (pro)` — Deep IP, FTO & Commercial Moat Risk Assessment
 
 ## 🎯 Role Overview
-The **Risk, Patent & Market Agent** leverages **Gemini 3.6 Flash** for fast processing of epidemiology datasets, generic competition threats, Total Addressable Market (TAM) expansions, patent estate longevity (composition of matter cliffs $>2038$), commercial standard-of-care moats, and CDMO supply chain risks.
+The **Risk, Patent & Market Agent** leverages **Claude Opus 4.6** for deep analytical reasoning across epidemiology datasets, generic competition threats, Total Addressable Market (TAM) expansions, patent estate longevity (composition of matter cliffs $>2038$), commercial standard-of-care moats, and CDMO supply chain risks.
 
 ---
 
@@ -19,7 +19,7 @@ The **Risk, Patent & Market Agent** leverages **Gemini 3.6 Flash** for fast proc
 
 ```mermaid
 graph TD
-    A[SEC Filings / Patent Databases / Market Data] --> B[Risk & Market Agent - Gemini 3.6 Flash]
+    A[SEC Filings / Patent Databases / Market Data] --> B[Risk & Market Agent - Claude Opus 4.6]
     B --> C[Audit Patent Expiration Dates & FTO]
     B --> D[Evaluate TAM & Commercial Moat]
     C & D --> E[Formulate Risk Mitigation Matrix]

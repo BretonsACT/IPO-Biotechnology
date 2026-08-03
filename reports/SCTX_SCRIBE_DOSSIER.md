@@ -3,13 +3,13 @@
 ## 1. Executive Summary & Core Thesis Statement
 
 **Ticker:** SCTX (NASDAQ)
-**Recommendation:** SPECULATIVE BUY
+**RECOMMENDATION:** HOLD
 **Target Price:** $26.00
 **Current Price (Est.):** $15.00
 **Implied Upside:** +73.3%
 **Investment Horizon:** 24-36 Months
 **Position Sizing:** Tactical Growth (2.0% Allocation)
-**Agent Score:** 76/100
+**AGENT SCORE:** 70/100
 **Media Score:** 83/100
 
 **Elevator Pitch:**

@@ -7,7 +7,7 @@
 **Implied Upside:** +66.6%  
 **Investment Horizon:** 18-24 Months  
 **Position Sizing:** Tactical Overweight (2.5% Allocation)  
-**Agent Score:** 79/100 | **Media Score:** 74/100  
+**Agent Score:** 75/100 | **Media Score:** 74/100  
 **Current Price (as of late July 2026):** ~$27.10
 
 ### Elevator Pitch

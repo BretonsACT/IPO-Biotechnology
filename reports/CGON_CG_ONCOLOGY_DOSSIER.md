@@ -8,12 +8,12 @@
 
 ## 1. Executive Summary & Core Thesis Statement
 
-**Recommendation:** **HOLD / NEUTRAL**  
+**RECOMMENDATION:** STRONG BUY  
 **Current Target Price:** **$68.00**  
 **Implied Upside:** **+6.2%**  
 **Investment Horizon:** 12-24 Months  
 **Position Sizing:** Market Weight (1.5% Allocation)  
-**Agent Score:** 68/100 | **Media Score:** 94/100  
+**AGENT SCORE:** 87/100 | **Media Score:** 94/100  
 
 ### Elevator Pitch
 CG Oncology (NASDAQ: CGON) has established itself as a premier late-stage clinical oncology company, driven by its transformative lead asset, cretostimogene grenadenorepvec. With pristine Phase 3 data recently published in *The Lancet Oncology* (August 2026), CGON offers an unequivocally de-risked clinical profile characterized by a **75.5% Complete Response (CR)** rate and **zero Grade 3/4 treatment-related adverse events** in BCG-unresponsive NMIBC. Despite these exceptional clinical fundamentals and a robust $1.076 billion cash runway extending into 1H 2029, our initiation at **HOLD / NEUTRAL** reflects the reality of current market pricing. Following a phenomenal run since its January 2024 IPO (>300% appreciation), the stock largely prices in near-term perfection. Furthermore, long-term commercial execution risks remain, underscored by the lack of composition of matter (CoM) patents, intensifying competition from J&J's TAR-200, and the necessity of building an independent urology-focused commercial infrastructure.

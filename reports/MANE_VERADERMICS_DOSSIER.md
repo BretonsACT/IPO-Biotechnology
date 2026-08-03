@@ -13,7 +13,7 @@
 **Current Implied Upside:** +88.2%
 **Investment Horizon:** 18-24 Months
 **Position Sizing:** Growth Allocation (2.5%)
-**Proprietary Agent Score:** 77/100
+**Proprietary Agent Score:** 76/100
 **Media Sentiment Score:** 80/100
 
 **Elevator Pitch:**

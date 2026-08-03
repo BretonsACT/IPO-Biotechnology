@@ -20,7 +20,7 @@
 # 1. Kailera Therapeutics (NASDAQ: KLRA)
 
 ### Executive Summary & Investment Thesis
-* **Rating**: 🟢 **STRONG BUY** | **Composite Multi-Agent Score**: **88 / 100**
+* **Rating**: 🔵 **SPECULATIVE BUY** | **Composite Multi-Agent Score**: **80 / 100**
 * **Stock Ticker**: NASDAQ: KLRA
 * **IPO Offer Price**: $20.00 | **Gross Capital Raised**: $625.0 Million (April 2026)
 * **Market Capitalization**: ~$2.40 Billion | **Enterprise Value**: ~$1.25 Billion
@@ -98,16 +98,16 @@ KAI-7535 is a once-daily oral non-peptide small-molecule GLP-1 receptor agonist.
 - ⏱️ **Mid-2028**: KaiNETIC-1 and KaiNETIC-2 pivotal Phase 3 top-line readouts & BLA filing.
 
 ```
-                    MULTI-AGENT SCORECARD: KAILERA
+                    MULTI-AGENT SCORECARD: KAILERA (v2.5)
 ┌──────────────────────────────┬────────┬──────────────────────────────┐
 │ Agent Category               │ Score  │ Weight Contribution          │
 ├──────────────────────────────┼────────┼──────────────────────────────┤
-│ 1. IPO Scanner Terms         │ 92/100 │ 13.8 / 15.0                  │
-│ 2. Clinical Pipeline         │ 90/100 │ 31.5 / 35.0                  │
-│ 3. Financial Valuation       │ 95/100 │ 28.5 / 30.0                  │
-│ 4. Risk & Market Moat        │ 78/100 │ 15.6 / 20.0                  │
+│ 1. Clinical Pipeline         │ 85/100 │ 34.0 / 40.0                  │
+│ 2. Financial Valuation       │ 82/100 │ 12.3 / 15.0                  │
+│ 3. Risk & Market Moat        │ 65/100 │ 19.5 / 30.0                  │
+│ 4. Media & Sentiment         │ 91/100 │ 13.7 / 15.0                  │
 ├──────────────────────────────┼────────┼──────────────────────────────┤
-│ COMPOSITE SCORE              │ 88/100 │ 🟢 STRONG BUY                │
+│ COMPOSITE SCORE              │ 80/100 │ 🔵 SPECULATIVE BUY           │
 └──────────────────────────────┴────────┴──────────────────────────────┘
 ```
 
@@ -117,7 +117,7 @@ KAI-7535 is a once-daily oral non-peptide small-molecule GLP-1 receptor agonist.
 # 2. Bicara Therapeutics (NASDAQ: BCAX)
 
 ### Executive Summary & Investment Thesis
-* **Rating**: 🔵 **SPECULATIVE BUY** | **Composite Multi-Agent Score**: **79 / 100**
+* **Rating**: 🔵 **SPECULATIVE BUY** | **Composite Multi-Agent Score**: **75 / 100**
 * **Stock Ticker**: NASDAQ: BCAX
 * **IPO Offer Price**: $18.00 | **Gross Capital Raised**: $362.0 Million (Sept 2024)
 * **Market Capitalization**: ~$1.80 Billion | **Enterprise Value**: ~$1.32 Billion
@@ -180,16 +180,16 @@ Bicara is conducting a global, randomized, double-blind, pivotal Phase 2/3 trial
 - ⏱️ **1H 2028**: Topline Phase 3 Overall Survival (OS) data and BLA submission.
 
 ```
-                    MULTI-AGENT SCORECARD: BICARA
+                    MULTI-AGENT SCORECARD: BICARA (v2.5)
 ┌──────────────────────────────┬────────┬──────────────────────────────┐
 │ Agent Category               │ Score  │ Weight Contribution          │
 ├──────────────────────────────┼────────┼──────────────────────────────┤
-│ 1. IPO Scanner Terms         │ 82/100 │ 12.3 / 15.0                  │
-│ 2. Clinical Pipeline         │ 85/100 │ 29.8 / 35.0                  │
-│ 3. Financial Valuation       │ 88/100 │ 26.4 / 30.0                  │
-│ 4. Risk & Market Moat        │ 70/100 │ 14.0 / 20.0                  │
+│ 1. Clinical Pipeline         │ 84/100 │ 33.6 / 40.0                  │
+│ 2. Financial Valuation       │ 78/100 │ 11.7 / 15.0                  │
+│ 3. Risk & Market Moat        │ 62/100 │ 18.6 / 30.0                  │
+│ 4. Media & Sentiment         │ 74/100 │ 11.1 / 15.0                  │
 ├──────────────────────────────┼────────┼──────────────────────────────┤
-│ COMPOSITE SCORE              │ 79/100 │ 🔵 SPECULATIVE BUY           │
+│ COMPOSITE SCORE              │ 75/100 │ 🔵 SPECULATIVE BUY           │
 └──────────────────────────────┴────────┴──────────────────────────────┘
 ```
 
@@ -199,7 +199,7 @@ Bicara is conducting a global, randomized, double-blind, pivotal Phase 2/3 trial
 # 3. CG Oncology (NASDAQ: CGON)
 
 ### Executive Summary & Investment Thesis
-* **Rating**: 🟡 **HOLD / NEUTRAL** | **Composite Multi-Agent Score**: **68 / 100**
+* **Rating**: 🟢 **STRONG BUY** | **Composite Multi-Agent Score**: **87 / 100**
 * **Stock Ticker**: NASDAQ: CGON
 * **IPO Offer Price**: $19.00 | **Gross Capital Raised**: $380.0 Million (Jan 2024)
 * **Market Capitalization**: ~$6.40 Billion | **Enterprise Value**: ~$5.81 Billion
@@ -253,16 +253,16 @@ CG Oncology is completing a rolling BLA submission to the FDA, with final CMC mo
 ### 3.4 Scorecard
 
 ```
-                  MULTI-AGENT SCORECARD: CG ONCOLOGY
+                    MULTI-AGENT SCORECARD: CG ONCOLOGY (v2.5)
 ┌──────────────────────────────┬────────┬──────────────────────────────┐
 │ Agent Category               │ Score  │ Weight Contribution          │
 ├──────────────────────────────┼────────┼──────────────────────────────┤
-│ 1. IPO Scanner Terms         │ 88/100 │ 13.2 / 15.0                  │
-│ 2. Clinical Pipeline         │ 96/100 │ 33.6 / 35.0                  │
-│ 3. Financial Valuation       │ 65/100 │ 19.5 / 30.0 (High MCap)     │
-│ 4. Risk & Market Moat        │ 60/100 │ 12.0 / 20.0                  │
+│ 1. Clinical Pipeline         │ 96/100 │ 38.4 / 40.0                  │
+│ 2. Financial Valuation       │ 88/100 │ 13.2 / 15.0                  │
+│ 3. Risk & Market Moat        │ 70/100 │ 21.0 / 30.0                  │
+│ 4. Media & Sentiment         │ 94/100 │ 14.1 / 15.0                  │
 ├──────────────────────────────┼────────┼──────────────────────────────┤
-│ COMPOSITE SCORE              │ 68/100 │ 🟡 HOLD / NEUTRAL            │
+│ COMPOSITE SCORE              │ 87/100 │ 🟢 STRONG BUY                │
 └──────────────────────────────┴────────┴──────────────────────────────┘
 ```
 
@@ -272,7 +272,7 @@ CG Oncology is completing a rolling BLA submission to the FDA, with final CMC mo
 # 4. Scribe Therapeutics (NASDAQ: SCTX)
 
 ### Executive Summary & Investment Thesis
-* **Rating**: 🔵 **SPECULATIVE BUY** | **Composite Multi-Agent Score**: **76 / 100**
+* **Rating**: 🟡 **HOLD / NEUTRAL** | **Composite Multi-Agent Score**: **70 / 100**
 * **Stock Ticker**: NASDAQ: SCTX
 * **IPO Offer Price**: $15.00 | **Gross Capital Raised**: $155.51 Million (July 2026)
 * **Market Capitalization**: ~$850.0 Million | **Enterprise Value**: ~$610.0 Million
@@ -317,16 +317,16 @@ STX-1150 uses engineered CasX proteins delivered via lipid nanoparticles (LNPs) 
 ### 4.3 Scorecard
 
 ```
-                    MULTI-AGENT SCORECARD: SCRIBE
+                    MULTI-AGENT SCORECARD: SCRIBE (v2.5)
 ┌──────────────────────────────┬────────┬──────────────────────────────┐
 │ Agent Category               │ Score  │ Weight Contribution          │
 ├──────────────────────────────┼────────┼──────────────────────────────┤
-│ 1. IPO Scanner Terms         │ 80/100 │ 12.0 / 15.0                  │
-│ 2. Clinical Pipeline         │ 75/100 │ 26.25 / 35.0                 │
-│ 3. Financial Valuation       │ 82/100 │ 24.6 / 30.0                  │
-│ 4. Risk & Market Moat        │ 75/100 │ 15.0 / 20.0                  │
+│ 1. Clinical Pipeline         │ 68/100 │ 27.2 / 40.0                  │
+│ 2. Financial Valuation       │ 74/100 │ 11.1 / 15.0                  │
+│ 3. Risk & Market Moat        │ 60/100 │ 18.0 / 30.0                  │
+│ 4. Media & Sentiment         │ 83/100 │ 12.5 / 15.0                  │
 ├──────────────────────────────┼────────┼──────────────────────────────┤
-│ COMPOSITE SCORE              │ 76/100 │ 🔵 SPECULATIVE BUY           │
+│ COMPOSITE SCORE              │ 70/100 │ 🟡 HOLD / NEUTRAL            │
 └──────────────────────────────┴────────┴──────────────────────────────┘
 ```
 
@@ -336,7 +336,7 @@ STX-1150 uses engineered CasX proteins delivered via lipid nanoparticles (LNPs) 
 # 5. Veradermics (NYSE: MANE)
 
 ### Executive Summary & Investment Thesis
-* **Rating**: 🔵 **SPECULATIVE BUY** | **Composite Multi-Agent Score**: **77 / 100**
+* **Rating**: 🔵 **SPECULATIVE BUY** | **Composite Multi-Agent Score**: **76 / 100**
 * **Stock Ticker**: NYSE: MANE
 * **Gross Capital Raised**: $766.8 Million (2026 IPO & Follow-on Financing)
 * **Market Capitalization**: ~$1.10 Billion | **Enterprise Value**: ~$790.0 Million
@@ -375,16 +375,16 @@ In over 500 male subjects, both once-daily and twice-daily dosing of VDPHL01 met
 ### 5.3 Scorecard
 
 ```
-                  MULTI-AGENT SCORECARD: VERADERMICS
+                    MULTI-AGENT SCORECARD: VERADERMICS (v2.5)
 ┌──────────────────────────────┬────────┬──────────────────────────────┐
 │ Agent Category               │ Score  │ Weight Contribution          │
 ├──────────────────────────────┼────────┼──────────────────────────────┤
-│ 1. IPO Scanner Terms         │ 85/100 │ 12.75 / 15.0                 │
-│ 2. Clinical Pipeline         │ 78/100 │ 27.3 / 35.0                  │
-│ 3. Financial Valuation       │ 90/100 │ 27.0 / 30.0                  │
-│ 4. Risk & Market Moat        │ 70/100 │ 14.0 / 20.0                  │
+│ 1. Clinical Pipeline         │ 78/100 │ 31.2 / 40.0                  │
+│ 2. Financial Valuation       │ 85/100 │ 12.8 / 15.0                  │
+│ 3. Risk & Market Moat        │ 65/100 │ 19.5 / 30.0                  │
+│ 4. Media & Sentiment         │ 80/100 │ 12.0 / 15.0                  │
 ├──────────────────────────────┼────────┼──────────────────────────────┤
-│ COMPOSITE SCORE              │ 77/100 │ 🔵 SPECULATIVE BUY           │
+│ COMPOSITE SCORE              │ 76/100 │ 🔵 SPECULATIVE BUY           │
 └──────────────────────────────┴────────┴──────────────────────────────┘
 ```
 
@@ -394,7 +394,7 @@ In over 500 male subjects, both once-daily and twice-daily dosing of VDPHL01 met
 # 6. Apnimed (NASDAQ: APMD)
 
 ### Executive Summary & Investment Thesis
-* **Rating**: 🟢 **STRONG WATCH / BUY PRE-PDUFA** | **Composite Multi-Agent Score**: **82 / 100**
+* **Rating**: 🔵 **SPECULATIVE BUY** | **Composite Multi-Agent Score**: **75 / 100**
 * **Stock Ticker**: NASDAQ: APMD
 * **IPO Offer Price**: $16.00 | **Gross Capital Raised**: $192.0 Million (July 31, 2026)
 * **Target Valuation**: ~$750.0 Million
@@ -440,15 +440,15 @@ Apnimed is developing **AD109 (Oxnimbi)**, a first-in-class once-daily oral comb
 ### 6.3 Scorecard
 
 ```
-                    MULTI-AGENT SCORECARD: APNIMED
+                    MULTI-AGENT SCORECARD: APNIMED (v2.5)
 ┌──────────────────────────────┬────────┬──────────────────────────────┐
 │ Agent Category               │ Score  │ Weight Contribution          │
 ├──────────────────────────────┼────────┼──────────────────────────────┤
-│ 1. IPO Scanner Terms         │ 84/100 │ 12.6 / 15.0                  │
-│ 2. Clinical Pipeline         │ 88/100 │ 30.8 / 35.0                  │
-│ 3. Financial Valuation       │ 80/100 │ 24.0 / 30.0                  │
-│ 4. Risk & Market Moat        │ 73/100 │ 14.6 / 20.0                  │
+│ 1. Clinical Pipeline         │ 85/100 │ 34.0 / 40.0                  │
+│ 2. Financial Valuation       │ 70/100 │ 10.5 / 15.0                  │
+│ 3. Risk & Market Moat        │ 58/100 │ 17.4 / 30.0                  │
+│ 4. Media & Sentiment         │ 86/100 │ 12.9 / 15.0                  │
 ├──────────────────────────────┼────────┼──────────────────────────────┤
-│ COMPOSITE SCORE              │ 82/100 │ 🟢 STRONG WATCH / BUY        │
+│ COMPOSITE SCORE              │ 75/100 │ 🔵 SPECULATIVE BUY           │
 └──────────────────────────────┴────────┴──────────────────────────────┘
 ```

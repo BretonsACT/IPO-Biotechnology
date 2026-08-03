@@ -4,12 +4,12 @@
 **DATE:** August 2026
 **TICKER:** NASDAQ: KLRA
 **SECTOR:** Biotechnology / Metabolic Diseases
-**RECOMMENDATION:** STRONG BUY
+**RECOMMENDATION:** SPECULATIVE BUY
 **TARGET PRICE:** $38.00
 **IMPLIED UPSIDE:** +90.0%
 **INVESTMENT HORIZON:** 24-36 Months
 **POSITION SIZING:** Overweight (3.5% Portfolio Allocation)
-**AGENT SCORE:** 88/100 | **MEDIA SCORE:** 91/100
+**AGENT SCORE:** 80/100 | **MEDIA SCORE:** 91/100
 
 ---
 

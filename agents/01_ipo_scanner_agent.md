@@ -9,13 +9,18 @@ The **IPO Scanner & Discovery Agent** is the primary intake module of the Biotec
 
 ## 📋 Core Responsibilities & Scope
 1. **Filing Detection & Verification**: Scan SEC EDGAR, NASDAQ, and NYSE listing filings for biotechnology (SIC Code 2834 / 2836) candidates.
-2. **Offering Structure Analysis**: Extract key financial terms of the IPO:
+2. **Qualifying Filter Criteria**:
+   - **Sector Filters**: Human Therapeutics, Gene Editing, Radiopharmaceuticals, Oncology, Immunology, Metabolic Diseases.
+   - **Minimum Raise Threshold**: $\ge \$50\text{ Million}$ gross expected proceeds (excludes penny-stock shell IPOs).
+   - **Listing Exchange Requirements**: NASDAQ Global Select / Global Market, NYSE.
+3. **Offering Structure Analysis**: Extract key financial terms of the IPO:
    - File Price Range & Final IPO Offer Price.
    - Total Shares Offered & Greenshoe Option (Over-allotment).
    - Gross & Net Expected Proceeds.
    - Lead Underwriters & Syndicate (e.g., J.P. Morgan, Jefferies, Morgan Stanley, Leerink Partners, Goldman Sachs).
-3. **Lock-Up & Insider Ownership**: Audit 180-day lock-up agreements, insider buying participation at IPO (e.g., existing venture capital backing), and float concentration.
-4. **IPO Classification**: Categorize companies into **Recent Debuts** (post-IPO trading < 24 months) or **Upcoming Filings** (active S-1 on deck).
+4. **Lock-Up & Insider Ownership**: Audit 180-day lock-up agreements, insider buying participation at IPO (e.g., existing venture capital backing), and float concentration.
+5. **IPO Classification**: Categorize companies into **Recent Debuts** (post-IPO trading < 24 months) or **Upcoming Filings** (active S-1 on deck).
+6. **Cross-Referencing & Synthesis**: Claude Opus 4.6 for cross-referencing S-1 prospectus amendments and syndicate agreements during final audit.
 
 ---
 

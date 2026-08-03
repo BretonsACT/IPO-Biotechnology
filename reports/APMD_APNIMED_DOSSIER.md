@@ -4,12 +4,12 @@
 
 **Company:** Apnimed
 **Ticker:** NASDAQ: APMD
-**Recommendation:** STRONG WATCH
+**RECOMMENDATION:** SPECULATIVE BUY
 **Target Price:** $34.00
 **Implied Upside:** +112.5%
 **Investment Horizon:** 6-12 Months
 **Position Sizing:** Core Pre-Catalyst (3.0%)
-**Agent Score:** 82/100 | **Media Score:** 86/100
+**AGENT SCORE:** 75/100 | **Media Score:** 86/100
 
 ### Core Thesis
 Apnimed (NASDAQ: APMD) is a clinical-stage biopharmaceutical company that has recently completed a highly successful Initial Public Offering, pioneering the development of a first-in-class, once-nightly oral therapy for Obstructive Sleep Apnea (OSA). The company's lead asset, AD109 (Oxnimbi), addresses the neurobiological root cause of the disorder by combining aroxybutynin (an antimuscarinic) and atomoxetine (a norepinephrine reuptake inhibitor) to increase upper airway dilator muscle tone during sleep. This prevents airway collapse without the need for mechanical intervention, marking a paradigm shift in the treatment of a highly prevalent yet chronically underserved condition.
